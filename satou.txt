@@ -1,0 +1,37 @@
+smalltrip
+
+条件
+	１．nuxt+Vuetify
+	２．内部contentまたは、HeadlessCMS（Contentful・microCMD）にてmdファイル
+	３．NetlifyまたはVercelでデプロイ
+	４．PC用の横メニューとハンバーガーメニュー
+	５．問い合わせ
+
+４．PC用の横メニューとハンバーガーメニュー
+	Vuetifyでヘッダーメニューの作成①【サイドメニューとハンバーガーメニュー】
+	https://yacchi-engineer.com/?p=1010
+
+５．問い合わせ
+	Nuxt.js のお問い合わせフォームに form.runを使う
+	https://blog.proglearn.com/2021/01/12/nuxt-js-%E3%81%AE%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A0%E3%81%AB-form-run%E3%82%92%E4%BD%BF%E3%81%86/
+	Netlify Forms を Nuxt（SSR/SSG）で使う
+	https://mykii.blog/nuxt-using-netlify-forms/
+
+２．内部contentまたは、HeadlessCMS（Contentful・microCMD）にてmdファイル
+	microCMS + NuxtでJamstackブログを作ってみよう
+	https://blog.microcms.io/microcms-nuxt-jamstack-blog/
+	Nuxt.js , microCMS ,Netlify の組み合わせでJAMstackなブログ開発
+	https://nuxtblog.work/blog/d6_mxl1zs/
+
+
+microCMS
+	サービス名	smalltrip
+	サービスID	smalltrip.microcms.io
+	API名		ブログ
+	エンドポイント	https://smalltrip.microcms.io/api/v1/blog
+
+git
+	https://github.com/kfbk/smalltrip.git
+
+1. Nuxtプロジェクトを用意する
+	npx create-nuxt-app smalltrip
