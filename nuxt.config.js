@@ -9,21 +9,6 @@ export default {
   env: {
     API_KEY
   },
-  generate: {
-    async routes() {
-      const pages = await axios
-        .get('https://smalltrip.microcms.io/api/v1/blog?limit=100', {
-          headers: { 'X-MICROCMS-API-KEY': process.env.API_KEY }
-        })
-        .then((res) =>
-          res.data.contents.map((content) => ({
-            route: `/${content.id}`,
-            payload: content
-          }))
-        )
-      return pages
-    }
-  },
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
 
@@ -92,5 +77,20 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-  }
+  },
+  generate: {
+    async routes() {
+      const pages = await axios
+        .get('https://smalltrip.microcms.io/api/v1/blog?limit=100', {
+          headers: { 'X-MICROCMS-API-KEY': process.env.API_KEY }
+        })
+        .then((res) =>
+          res.data.contents.map((content) => ({
+            route: `/${content.id}`,
+            payload: content
+          }))
+        )
+      return pages
+    }
+  },
 }

@@ -19,19 +19,66 @@ smalltrip
 
 ２．内部contentまたは、HeadlessCMS（Contentful・microCMD）にてmdファイル
 	microCMS + NuxtでJamstackブログを作ってみよう
-	https://blog.microcms.io/microcms-nuxt-jamstack-blog/
+	https://blog.microcms.io/microcms-nuxt-jamstack-blog/		nuxt-blog5
 	Nuxt.js , microCMS ,Netlify の組み合わせでJAMstackなブログ開発
-	https://nuxtblog.work/blog/d6_mxl1zs/
+	https://nuxtblog.work/blog/d6_mxl1zs/				nuxt-blog3
 
 
-microCMS
+
+
+nuxt-blog5を基本に作成
+
+1. Nuxtプロジェクトを用意する
+	npx create-nuxt-app smalltrip
+
+	? Project name: smalltrip
+	? Programming language: JavaScript
+	? Package manager: Npm
+	? UI framework: Vuetify.js
+	? Nuxt.js modules: Axios - Promise based HTTP client
+	? Linting tools: (Press <space> to select, <a> to toggle all, <i> to invert selection)
+	? Testing framework: None
+	? Rendering mode: Universal (SSR / SSG)
+	? Deployment target: Static (Static/Jamstack hosting)
+	? Development tools: jsconfig.json (Recommended for VS Code if you're not using typescript)
+	? What is your GitHub username? kfbk
+	? Version control system: Git
+
+
+	cd smalltrip
+	npm run dev
+
+2. microCMSの用意する
+
 	サービス名	smalltrip
 	サービスID	smalltrip.microcms.io
 	API名		ブログ
 	エンドポイント	https://smalltrip.microcms.io/api/v1/blog
+	APIキー		1ce395b74a0e4a3cb2633988335a49ee5515
 
-git
-	https://github.com/kfbk/smalltrip.git
+3. ブログ一覧を表示する
 
-1. Nuxtプロジェクトを用意する
-	npx create-nuxt-app smalltrip
+	nuxt-blog3を参照に「.env」にAPIキーを入れる
+	npm install --save @nuxtjs/dotenv 
+
+4. ブログ詳細を表示する
+
+	pages/ ディレクトリ以下に _slug/ ディレクトリを作成し、その中に index.vue を作成します
+
+5. CSSで見た目を装飾する
+
+	npm install node-sass@4.14.1 sass-loader@10.1.1		Vuetifyを使うので、中止
+
+6. ビルドして静的ファイルを生成してみる
+
+	npm run generate
+	dist/ 配下に生成されたHTMLがある
+
+7. ファイルをホスティングする
+
+	GitHubでリポジトリを作成
+		https://github.com/kfbk/smalltrip.git
+	SourceTreeにて
+		リポジトリを作成
+		Commit　push
+
