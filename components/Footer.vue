@@ -1,5 +1,5 @@
 <template>
-  <v-footer dark absolute>
+  <v-footer color="primary" dark app>
     <div class="footer">
       Copyright 小さな旅友の会 2021. All right reserved
     </div>

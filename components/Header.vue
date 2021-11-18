@@ -1,6 +1,6 @@
 <template>
     <header>
-      <v-app-bar app dark>
+      <v-app-bar color="primary" dark app>
         <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
         <v-toolbar-title>小さな旅友の会</v-toolbar-title>
         <v-tabs>
@@ -49,6 +49,10 @@ export default {
         {
           name: 'つぶやき',
           link: '/blog'
+        },
+        {
+          name: '問い合わせ',
+          link: '/contact'
         },
       ],
     }
