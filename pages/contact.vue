@@ -1,7 +1,7 @@
 <template>
   <div>
     <form name="contact" method="POST" netlify-honeypot="bot-field" netlify>
-      <input type="hidden" name="form-name" :value="contact" />
+      <input type="hidden" name="form-name" value="contact" />
       <div v-show="false">
         <label for="bot">スパムでない場合は空欄</label>
         <input id="bot" type="text" name="bot-field" />
