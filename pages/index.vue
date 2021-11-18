@@ -1,31 +1,50 @@
 <template>
-  <ul>
-    <li v-for="content in contents" :key="content.id">
-      <nuxt-link :to="`/${content.id}`">
-        {{ content.title }}
-      </nuxt-link>
-    </li>
-  </ul>
+  <section>
+    <v-container fluid fill-height>
+      <v-row class="mt-2 justify-content-md-center">
+        <v-col cols="8">
+          <p>2021/11/14 赤城荒山にて</p>
+          <img src="~assets/img/2021-11-14 10.06.56.jpg">
+        </v-col>
+      </v-row>
+            <v-row class="mt-2 justify-content-md-center">
+              <v-col cols="8">
+                群馬県高崎市を中心に北関東から集まった山登りの会です。<br>
+                2021年現在、約30年前から活動しています。会員は約20名です。<br>
+                小さな記憶を温めるため、ここに記録を残すとともに、<br>
+                新しい会員を募集します。<br>
+                ただし、新しい会員は、問合せページにて公募しますが、<br>
+                現会員と会ってその人の推薦方式にしたいと考えています。<br>
+                会員は、「つぶやき」ページでつぶやくことが出来ます。
+              </v-col>
+            </v-row>
+    </v-container>
+  </section>
 </template>
 
-<script>
-import axios from 'axios'
-export default {
-  async asyncData() {
-    const { data } = await axios.get(
-      // your-service-id部分は自分のサービスidに置き換えてください
-      'https://smalltrip.microcms.io/api/v1/blog',
-      {
-        // your-api-key部分は自分のapi-keyに置き換えてください
-        headers: { 'X-MICROCMS-API-KEY': process.env.API_KEY }
-      }
-    )
-    return data
-  }
-}
-</script>
 
 <!--<template>
+  <article class="container-fluid">
+    <div class="row mt-2 justify-content-md-center">
+      <div class="col-8">
+        <p>2021/11/14 赤城荒山にて</p>
+        <img src="~assets/img/2021-11-14 10.06.56.jpg">
+      </div>
+    </div>
+    <div class="row mt-4 justify-content-md-center">
+      <div class="col-8">
+        群馬県高崎市を中心に北関東から集まった山登りの会です。<br>
+        2021年現在、約30年前から活動しています。会員は約20名です。<br>
+        小さな記憶を温めるため、ここに記録を残すとともに、<br>
+        新しい会員を募集します。<br>
+        ただし、新しい会員は、問合せページにて公募しますが、<br>
+        現会員と会ってその人の推薦方式にしたいと考えています。<br>
+        会員は、「つぶやき」ページでつぶやくことが出来ます。
+      </div>
+    </div>
+  </article>
+</template>
+<template>
   <v-row justify="center" align="center">
     <v-col cols="12" sm="8" md="6">
       <v-card class="logo py-4 d-flex justify-center">

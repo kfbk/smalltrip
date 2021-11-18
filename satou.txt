@@ -81,4 +81,19 @@ nuxt-blog5を基本に作成
 	SourceTreeにて
 		リポジトリを作成
 		Commit　push
+	Netlify
+		buildCommand：	npm run generate
+		Advanced build settingsからmicroCMSのAPIキーをValueに設定します
+		https://agitated-galileo-fda371.netlify.app　--> https://smalltrip.netlify.app
 
+8. microCMSとNetlifyを連携する
+
+	microCMSの管理画面で記事を編集するだけで、公開されたサイトが自動で最新化される設定
+	Netlifyにて
+		Build hooks　：　Build hook name＝netlify_hook
+		save --> https://api.netlify.com/build_hooks/61809f3062fa95248f84d893
+	microCMS
+		Webhook　：　上記BuildHookのURLを貼り付け
+
+その他
+	日付	https://devsakaso.com/nuxt-js-format-date/

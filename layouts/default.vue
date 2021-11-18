@@ -1,4 +1,17 @@
 <template>
+  <v-app>
+    <Header />
+    <v-main>
+      <v-container>
+        <Nuxt />
+      </v-container>
+    </v-main>
+    <Footer />
+  </v-app>
+</template>
+
+
+<!--<template>
   <v-app dark>
     <v-navigation-drawer
       v-model="drawer"
@@ -114,4 +127,4 @@ export default {
     }
   }
 }
-</script>
+</script>-->
