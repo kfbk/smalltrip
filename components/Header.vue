@@ -54,6 +54,10 @@ export default {
           name: '問い合わせ',
           link: '/contact'
         },
+        {
+          name: '月例山行',
+          link: '/plan'
+        },
       ],
     }
   }

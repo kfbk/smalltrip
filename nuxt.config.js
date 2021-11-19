@@ -17,12 +17,13 @@ export default {
     titleTemplate: '%s - smalltrip',
     title: 'smalltrip',
     htmlAttrs: {
-      lang: 'en'
+      lang: 'ja'
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      { hid: 'description', name: 'description', content: '小さな旅友の会' },
+      { hid: 'keywords', name: 'keywords', content: '高崎,北関東,山登り' },
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [

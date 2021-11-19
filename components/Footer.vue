@@ -1,16 +1,10 @@
 <template>
   <v-footer color="primary" dark app>
-    <div class="footer">
-      Copyright 小さな旅友の会 2021. All right reserved
-    </div>
+    <v-col
+        class="text-center"
+        cols="12"
+    >
+      Copyright &copy; 小さな旅友の会 {{ new Date().getFullYear() }}. All right reserved
+    </v-col>
   </v-footer>
 </template>
-
-<style lang="scss" scoped>
-// 効かない！！！！！！！！！！！！！！！！
-.footer {
-  // margin: 0 auto;
-  text-align: center;
-  color: red;
-  margin-left: 50px;
-}

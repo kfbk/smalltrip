@@ -4,12 +4,12 @@
     <ul>
       <li v-for="content in contents" :key="content.id">
         <nuxt-link :to="`/${content.id}`">
-          <v-card>
+          <v-card class="mt-2">
             <v-card-title>
               {{ content.title }}
             </v-card-title>
             <v-card-subtitle>
-              {{ content.nickname}}
+              {{ new Date(content.publishedAt).toLocaleDateString() }} {{ content.nickname}}
             </v-card-subtitle>
           </v-card>
         </nuxt-link>
