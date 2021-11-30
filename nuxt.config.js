@@ -23,7 +23,7 @@ export default {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: '小さな旅友の会' },
-      { hid: 'keywords', name: 'keywords', content: '高崎,北関東,山登り' },
+      { hid: 'keywords', name: 'keywords', content: '高崎,北関東,山,旅,友,会' },
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [

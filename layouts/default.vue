@@ -2,7 +2,9 @@
   <v-app>
     <Header />
     <v-main>
+      <!-- <v-content></v-content> これで、メニューバーの下が広がり過ぎ-->
       <v-container>
+         <!-- fluid> これで、左いっぱいになる-->
         <Nuxt />
       </v-container>
     </v-main>

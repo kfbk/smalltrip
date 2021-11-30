@@ -7,6 +7,8 @@ smalltrip
 	４．PC用の横メニューとハンバーガーメニュー
 	５．問い合わせ
 	６． SEO対策
+	７．ロゴ・ファビコン
+	８．ページングの実装
 
 ４．PC用の横メニューとハンバーガーメニュー
 	Vuetifyでヘッダーメニューの作成①【サイドメニューとハンバーガーメニュー】
@@ -27,6 +29,11 @@ smalltrip
 	https://nuxtblog.work/blog/d6_mxl1zs/				nuxt-blog3
 
 ６． SEO対策
+
+８．ページングの実装
+	NuxtのJamstack構成におけるページングの実装
+	https://blog.microcms.io/nuxt-jamstack-paging/
+	これは難しい。別の方法として、vuetifyのテーブルを使うことを研究する　-→　nuxt-table
 
 
 

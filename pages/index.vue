@@ -1,6 +1,31 @@
 <template>
   <section>
     <v-container fluid fill-height>
+
+      <!-- <v-card>
+        <v-card-title>
+          最新のつぶやき
+        </v-card-title>
+        <v-card-content>
+    <ul>
+      <li v-for="content in contents" :key="content.id">
+        <nuxt-link :to="`/${content.id}`">
+              {{ content.title }}
+        </nuxt-link>
+      </li>
+    </ul>
+        </v-card-content>
+      </v-card> -->
+
+      <!-- </v-card>
+          <v-card class="mt-2">
+            <v-card-title>
+            </v-card-title>
+            <v-card-subtitle>
+              {{ new Date(content.publishedAt).toLocaleDateString() }} {{ content.nickname}}
+            </v-card-subtitle>
+          </v-card> -->
+
       <v-row class="mt-2 justify-content-md-center">
         <v-col cols="8">
           <p>2021/11/14 赤城荒山にて</p>
@@ -8,7 +33,7 @@
         </v-col>
       </v-row>
             <v-row class="mt-2 justify-content-md-center">
-              <v-col cols="8">
+              <v-col cols="10">
                 群馬県高崎市を中心に北関東から集まった山登りの会です。<br>
                 2021年現在、約30年前から活動しています。会員は約20名です。<br>
                 小さな記憶を温めるため、ここに記録を残すとともに、<br>
@@ -22,6 +47,25 @@
   </section>
 </template>
 
+<script>
+import axios from 'axios'
+export default {
+  async asyncData() {
+    const { data } = await axios.get(
+      // your-service-id部分は自分のサービスidに置き換えてください
+      'https://smalltrip.microcms.io/api/v1/blog?limit=5',
+      {
+        // your-api-key部分は自分のapi-keyに置き換えてください
+        headers: { 'X-MICROCMS-API-KEY': process.env.API_KEY }
+      }
+    )
+    return data
+  },
+  mounted() {
+    console.log(this.$store.getters.isAuthenticated)
+  }
+}
+</script>
 
 <!--<template>
   <article class="container-fluid">

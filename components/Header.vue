@@ -1,8 +1,14 @@
 <template>
-    <header>
+    <div>
+    <!-- <v-app> これにすると、メイン画面が無くなる-->
+      <!-- <v-navigation-drawer app>SideMenu</v-navigation-drawer> -->
       <v-app-bar color="primary" dark app>
+        <!-- ハンバーガーメニュー -->
         <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
-        <v-toolbar-title>小さな旅友の会</v-toolbar-title>
+        <v-toolbar-title>
+          <img src="/logo.png" alt="" height="40px" align="middle">
+          <span> 小さな旅友の会</span>
+        </v-toolbar-title>
         <v-tabs>
           <v-tab
             v-for="(menuItem,index) in menuItems"
@@ -33,7 +39,7 @@
           </v-list-item-group>
         </v-list>
       </v-navigation-drawer>
-    </header>
+    </div>
 </template>
 
 <script>
@@ -69,6 +75,10 @@ export default {
 .v-toolbar__title {
   overflow: visible !important;
   margin-right: 50px !important;
+}
+.title {
+  height: 40px;
+  line-height: 40px;
 }
 // PCのときハンバーガーメニューを非表示
 .v-app-bar__nav-icon {

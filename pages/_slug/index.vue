@@ -1,10 +1,17 @@
 <template>
   <main class="main">
-    <h1 class="title">{{ title }}</h1>
-    <p>
+    <v-card>
+      <v-card-title>
+    {{ title }}
+    </v-card-title>
+    <v-card-subtitle>
       {{ new Date(publishedAt).toLocaleDateString() }} {{ nickname }}
-    </p>
+    </v-card-subtitle>
+    <hr>
+    <v-card-text>
     <div class="post" v-html="body"></div>
+    </v-card-text>
+    </v-card>
   </main>
 </template>
 

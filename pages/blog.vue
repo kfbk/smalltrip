@@ -3,7 +3,7 @@
     <h1>つぶやき一覧</h1>
     <ul>
       <li v-for="content in contents" :key="content.id">
-        <nuxt-link :to="`/${content.id}`">
+        <nuxt-link :to="`/${content.id}`" style="text-decoration: none;">
           <v-card class="mt-2">
             <v-card-title>
               {{ content.title }}
