@@ -2,7 +2,9 @@
   <main class="main">
     <v-card>
       <v-card-title>
-    {{ title }}
+        {{ title }}
+              <v-spacer />
+      <v-btn to="/blog" nuxt>戻る</v-btn>
     </v-card-title>
     <v-card-subtitle>
       {{ new Date(publishedAt).toLocaleDateString() }} {{ nickname }}

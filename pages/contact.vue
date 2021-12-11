@@ -1,5 +1,14 @@
 <template>
   <div>
+    <p>
+      次の電話またはメールにて問い合わせ下さい<br><br>
+      居酒屋 [風車] 内、新井<br>
+      電話番号：0495-21-8406<br>
+      12:00～17:00にTEL下さい
+    </p>
+    <p>
+      ――――― 以下は、メールでの問い合わせ ―――――――
+    </p>
     <form name="contact" method="POST" netlify-honeypot="bot-field" netlify>
       <input type="hidden" name="form-name" value="contact" />
       <div v-show="false">

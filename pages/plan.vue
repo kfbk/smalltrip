@@ -81,7 +81,7 @@ export default {
         },
         {
           name: '８',
-          mount: '未定',
+          mount: '暑気払い',
           place: '',
           course: '',
           time: ''

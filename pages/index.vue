@@ -1,48 +1,74 @@
 <template>
   <section>
     <v-container fluid fill-height>
+      <v-row justify="center">
+        <v-col cols="12" sm="8" md="6">
 
-      <!-- <v-card>
-        <v-card-title>
-          最新のつぶやき
-        </v-card-title>
-        <v-card-content>
-    <ul>
-      <li v-for="content in contents" :key="content.id">
-        <nuxt-link :to="`/${content.id}`">
-              {{ content.title }}
-        </nuxt-link>
-      </li>
-    </ul>
-        </v-card-content>
-      </v-card> -->
-
-      <!-- </v-card>
-          <v-card class="mt-2">
+          <v-card>
             <v-card-title>
+              最新情報
             </v-card-title>
-            <v-card-subtitle>
-              {{ new Date(content.publishedAt).toLocaleDateString() }} {{ content.nickname}}
-            </v-card-subtitle>
-          </v-card> -->
+            <v-card-content>
+              <ul>
+                <li>
+                  2021/11/30：つぶやき「赤城山（黒檜）」
+                </li>
+                <li>
+                  2021/11/24：つぶやき「2022年最初の山は桐生吾妻山）」
+                </li>
+                <li>
+                  2021/11/17：つぶやき「初参加」
+                </li>
+                <li>
+                  2021/11/17：ホームページ開設
+                </li>
+              </ul>
+            </v-card-content>
+          </v-card>
 
-      <v-row class="mt-2 justify-content-md-center">
-        <v-col cols="8">
-          <p>2021/11/14 赤城荒山にて</p>
-          <img src="~assets/img/2021-11-14 10.06.56.jpg">
+          <table class="mt-5">
+            <tr>
+              <td><h1>小さな旅友の会 会員募集</h1></td>
+            </tr>
+          </table>
+            <p class="ml-5 mt-1">
+              本会で、新規の仲間を募集しています<br/>
+              入会金・年会費 無料<br>
+              基本 5000円／月<br>
+              スポーツ安全保険：<br>&nbsp;&nbsp;&nbsp;1200円（65歳以上）1850円（それ未満）／年<br>
+              問い合わせページから問い合わせてください
+            </p>
+          <table class="mt-5">
+            <tr>
+              <td><h1>小さな旅友の会 紹介</h1></td>
+              <td>2021年12月作成</td>
+            </tr>
+          </table>
+
+          <img src="~assets/img/2021-12-04 08.07.38.jpg" class="mt-1">
+          <p class="mt-1">
+            平成4年1月に高崎市の山登り仲間を中心として結成され、<br>
+            30年の歴史がある楽しい山登りの会です。<br>
+            現在は、主に群馬県・埼玉県の日帰り登山をしております。<br>
+            会員は、65歳以上の高齢者ばかりの23名が加入しております。<br>
+            若手がいないのが悩みの種です。<br>
+          <p/>
+          <p>
+            <strong>最近（2021年）の活動について</strong><br>
+            毎月 第3日曜日<br>
+            高崎駅東口　7:30　集合、出発<br>
+            貸切バスをチャーター<br>
+            歩行時間は3時間半前後<br>
+            山登り・日帰り入浴・懇親会（アルコールは各自実費）<br>
+            バス代・日帰り入浴代込みで、参加費5,000円　当日徴収<br>
+            年1回10月に一泊二日でゆっくりと山登り<br>
+          <p/>
+          <p>
+            楽しい仲間とゆっくり山登りも良いのではないでしょうか？<br>
+            一人で登る山もよし、仲間と登る山もよし！！<br>
+          </p>
         </v-col>
-      </v-row>
-            <v-row class="mt-2 justify-content-md-center">
-              <v-col cols="10">
-                群馬県高崎市を中心に北関東から集まった山登りの会です。<br>
-                2021年現在、約30年前から活動しています。会員は約20名です。<br>
-                小さな記憶を温めるため、ここに記録を残すとともに、<br>
-                新しい会員を募集します。<br>
-                ただし、新しい会員は、問い合わせページにて公募しますが、<br>
-                現会員と会ってその人の推薦方式にしたいと考えています。<br>
-                会員になれば、「つぶやき」ページでつぶやくことが出来ます。
-              </v-col>
-            </v-row>
+       </v-row>
     </v-container>
   </section>
 </template>
@@ -66,6 +92,20 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+th,td {
+  border: solid 1px;              /* 枠線指定 */
+  padding: 10px;      /* 余白指定 */
+}
+table {
+  border-collapse:  collapse;     /* セルの線を重ねる */
+  /* width: 350px; */
+}
+thead {
+  background-color: aqua;
+}
+</style>
 
 <!--<template>
   <article class="container-fluid">
