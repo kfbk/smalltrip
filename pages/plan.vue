@@ -120,7 +120,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 th,td {
   border: solid 1px;              /* 枠線指定 */
   padding: 10px;      /* 余白指定 */
