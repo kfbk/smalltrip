@@ -11,7 +11,23 @@ export default {
   },
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
-
+  sitemap: {
+    path: '/sitemap.xml',
+    //hostname: 'http://localhost:3000/',
+    hostname: 'https://smalltrip.netlify.app/',
+// routes(callback) {
+    //   axios.get('https://smalltrip.microcms.io/api/v1/blog?limit=100', {
+    //       headers: { 'X-MICROCMS-API-KEY': process.env.API_KEY }
+    //     })
+    //     .then((res) => {
+    //       const routes = res.data.contents.map((content) => {
+    //         return '/blog/' + blog.id
+    //       })
+    //       callback(null, routes)
+    //     })
+    //     .catch(callback)
+    //}
+  },
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     titleTemplate: '%s - smalltrip',
@@ -23,7 +39,7 @@ export default {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: '小さな旅友の会' },
-      { hid: 'keywords', name: 'keywords', content: '高崎,北関東,山,旅,友,会' },
+      { hid: 'keywords', name: 'keywords', content: '高崎,北関東,山,旅,友,会,山登り,ハイキング,本庄,深谷,伊勢崎' },
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
@@ -55,6 +71,7 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
+    '@nuxtjs/sitemap', // 追加
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
