@@ -64,6 +64,10 @@ export default {
           name: '月例山行',
           link: '/plan'
         },
+        {
+          name: '過去の月例山行',
+          link: '/past'
+        },
       ],
     }
   }

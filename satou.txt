@@ -6,10 +6,11 @@ smalltrip
 	３．NetlifyまたはVercelでデプロイ
 	４．PC用の横メニューとハンバーガーメニュー
 	５．問い合わせ
-	６． SEO対策					-->未実装
+	６． SEO対策
 	７．ロゴ・ファビコン
 	８．ページングの実装				-->未実装
 	９．ログイン機能				-->未実装
+	10．サイトマップ
 
 ４．PC用の横メニューとハンバーガーメニュー
 	Vuetifyでヘッダーメニューの作成①【サイドメニューとハンバーガーメニュー】
@@ -31,11 +32,25 @@ smalltrip
 
 ６． SEO対策
 
+	https://seolaboratory.jp/41560/
+
+	DNS レコードでのドメイン所有権の確認
+	smalltrip.netlify.app
+	手順:
+	1. ご利用のドメイン名プロバイダ（godaddy.com、namecheap.com など）にログインします
+	2. 以下の TXT レコードを smalltrip.netlify.app の DNS 設定にコピーします
+	google-site-verification=MJvIuxl6JMoOun3FFGHrTT2bvTjpIVfCeH625Mzbb9U
+	3. 下の [確認] を押します
+	注: DNS の変更が適用されるまでに時間がかかる場合があります。Search Console ですぐにレコードを確認できない場合は、1 日待ってからもう一度お試しください
+
 ８．ページングの実装
 	NuxtのJamstack構成におけるページングの実装
 	https://blog.microcms.io/nuxt-jamstack-paging/
 	これは難しい。別の方法として、vuetifyのテーブルを使うことを研究する　-→　nuxt-table
 
+10．サイトマップ
+	Nuxtで静的ファイル生成時にサイトマップを生成する（microCMS対応）
+	https://mykii.blog/nuxt-microcms-sitemap/
 
 
 nuxt-blog5を基本に作成
@@ -58,7 +73,7 @@ nuxt-blog5を基本に作成
 
 
 	cd smalltrip
-	npm run dev
+	npm run dev		 http://localhost:3000/
 
 2. microCMSの用意する
 

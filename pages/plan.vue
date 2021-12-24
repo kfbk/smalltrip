@@ -114,7 +114,7 @@ export default {
           course: '',
           time: ''
         },
-      ]
+      ],
     }
   }
 }
