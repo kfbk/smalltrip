@@ -129,7 +129,7 @@ export default {
             {
               name: '10',
               mount: '大菩薩峠',
-              place: '',
+              place: '甲州市',
             },
             {
               name: '11',
@@ -163,7 +163,7 @@ export default {
             },
             {
               name: '５',
-              mount: '',
+              mount: '吾妻耶山',
               place: '水上',
             },
             {
@@ -228,8 +228,8 @@ export default {
             },
             {
               name: '７',
-              mount: '',
-              place: '',
+              mount: '縞枯山',
+              place: '茅野市',
             },
             {
               name: '９',
@@ -278,8 +278,8 @@ export default {
             },
             {
               name: '６',
-              mount: '',
-              place: '',
+              mount: '赤城／鈴ヶ岳',
+              place: '富士見村',
             },
             {
               name: '７',
