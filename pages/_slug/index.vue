@@ -33,8 +33,9 @@ export default {
 }
 </script>
 
+// scoped を付けると画像がレシポンシブにならない
 <style>
-img {
+.post img {
 width:100%;
 max-width: 100%;
 height: auto;
