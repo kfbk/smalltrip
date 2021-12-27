@@ -199,7 +199,7 @@ export default {
             {
               name: '１',
               mount: '雪で中止',
-              place: '',
+              place: '---',
             },
             {
               name: '２',
@@ -264,7 +264,7 @@ export default {
             {
               name: '３',
               mount: '十二ヶ岳',
-              place: '',
+              place: '高山村',
             },
             {
               name: '４',
