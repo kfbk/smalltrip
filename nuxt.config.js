@@ -30,8 +30,9 @@ export default {
   },
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: '%s - smalltrip',
-    title: 'smalltrip',
+    // titleTemplate: '%s - smalltrip',
+    titleTemplate: '%s',
+    title: '小さな旅友の会',
     htmlAttrs: {
       lang: 'ja'
     },
