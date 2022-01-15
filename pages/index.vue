@@ -10,7 +10,10 @@
             </v-card-title>
             <v-card-content>
               <ul>
-                <li>
+                <li v-for="content in contents" :key="content.id">
+                  <span>{{ new Date(content.publishedAt).toLocaleDateString() }}</span> {{ content.title }}
+                </li>
+                <!-- <li>
                   2021/12/23:「過去の月例山行」ページ追加
                 </li>
                 <li>
@@ -24,7 +27,7 @@
                 </li>
                 <li>
                   2021/11/17：ホームページ開設
-                </li>
+                </li> -->
               </ul>
             </v-card-content>
           </v-card>
@@ -107,6 +110,10 @@ table {
 }
 thead {
   background-color: aqua;
+}
+span {
+  display: inline-block;
+  width: 7em;
 }
 </style>
 
