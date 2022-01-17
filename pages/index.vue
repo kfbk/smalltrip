@@ -6,7 +6,7 @@
 
           <v-card>
             <v-card-title>
-              最新情報
+              つぶやき最新情報
             </v-card-title>
             <v-card-content>
               <ul>
