@@ -1,5 +1,8 @@
 <template>
   <div>
+    <v-container>
+      <v-row justify="center">
+        <v-col cols="12" sm="8" md="6">
     <h1>つぶやき一覧</h1>
     <ul>
       <li v-for="content in contents" :key="content.id">
@@ -15,6 +18,9 @@
         </nuxt-link>
       </li>
     </ul>
+        </v-col>
+      </v-row>
+    </v-container>
   </div>
 </template>
 

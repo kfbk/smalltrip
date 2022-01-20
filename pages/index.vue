@@ -1,6 +1,6 @@
 <template>
   <section>
-    <v-container fluid fill-height>
+    <v-container>
       <v-row justify="center">
         <v-col cols="12" sm="8" md="6">
 
@@ -11,7 +11,10 @@
             <v-card-content>
               <ul>
                 <li v-for="content in contents" :key="content.id">
-                  <span>{{ new Date(content.publishedAt).toLocaleDateString() }}</span> {{ content.title }}
+                  <span>{{ new Date(content.publishedAt).toLocaleDateString() }}</span>
+        <nuxt-link :to="`/${content.id}`" style="text-decoration: none;">
+                  {{ content.title }}
+                  </nuxt-link>
                 </li>
                 <!-- <li>
                   2021/12/23:「過去の月例山行」ページ追加
@@ -74,7 +77,7 @@
             一人で登る山もよし、仲間と登る山もよし！！<br>
           </p>
         </v-col>
-       </v-row>
+      </v-row>
     </v-container>
   </section>
 </template>
