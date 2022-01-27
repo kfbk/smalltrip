@@ -1,5 +1,8 @@
 <template>
   <div>
+    <v-container>
+      <v-row justify="center">
+        <v-col cols="12" sm="8" md="6">
     <img src="~assets/img/hiking.png" height="100">
     <p>2022年　山行計画</p>
     <table width="100%">
@@ -13,15 +16,95 @@
         </tr>
       </thead>
       <tbody>
-        <tr v-for="month in yearplan" :key="month.name">
-          <td>{{month.name}}</td>
-          <td>{{month.mount}}</td>
-          <td>{{month.place}}</td>
-          <td>{{month.course}}</td>
-          <td>{{month.time}}</td>
+        <tr>
+          <td>１</td>
+          <td>吾妻山</td>
+          <td>桐生市</td>
+          <td>吾妻公園ｰ吾妻山-村松峠ｰ吾妻公園</td>
+          <td>２時間半</td>
+        </tr>
+        <tr>
+          <td>２</td>
+          <td>神成山</td>
+          <td>富岡市</td>
+          <td>神農原―神成山ー南蛇井</td>
+          <td style="background-color:red;">コロナ中止</td>
+        </tr>
+        <tr>
+          <td>３</td>
+          <td>黒滝山</td>
+          <td>南牧村</td>
+          <td>不動寺ー観音岩(870)ー鷹巣山－不動寺</td>
+          <td>３時間半</td>
+        </tr>
+        <tr>
+          <td>４</td>
+          <td>菅峰</td>
+          <td>東吾妻町</td>
+          <td>須賀尾峠ー菅峰（往復）</td>
+          <td>３時間</td>
+        </tr>
+        <tr>
+          <td>５</td>
+          <td>嵩山</td>
+          <td>中之条町</td>
+          <td>東登山口-嵩山－東登山口</td>
+          <td>２時間半</td>
+        </tr>
+        <tr>
+          <td>６</td>
+          <td>赤城五輪ハイキングコース</td>
+          <td>富士見村</td>
+          <td>大沼-五輪峠ｰ薬師岳ｰ出張峠ｰキャンプ場</td>
+          <td>３時間</td>
+        </tr>
+        <tr>
+          <td>７</td>
+          <td>四阿屋山</td>
+          <td>両神村</td>
+          <td>薬師堂ー四阿屋山（往復）</td>
+          <td>３時間</td>
+        </tr>
+        <tr>
+          <td>８</td>
+          <td>暑気払い</td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>９</td>
+          <td未定</td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>泊り山行：弥彦山・角田山</td>
+          <td>新潟県</td>
+          <td>未定</td>
+          <td>未定</td>
+        </tr>
+        <tr>
+          <td>11</td>
+          <td>備前楯山</td>
+          <td>足尾町</td>
+          <td>かじか荘ー備前楯山（往復）</td>
+          <td>2時間30分</td>
+        </tr>
+        <tr>
+          <td>12</td>
+          <td>忘年会</td>
+          <td></td>
+          <td></td>
+          <td></td>
         </tr>
       </tbody>
     </table>
+        </v-col>
+      </v-row>
+    </v-container>
   </div>
 </template>
 
@@ -29,92 +112,6 @@
 export default {
   data() {
     return {
-      yearplan: [
-        {
-          name: '１',
-          mount: '吾妻山',
-          place: '桐生市',
-          course: '吾妻公園ｰ吾妻山-村松峠ｰ吾妻公園',
-          time: '２時間半'
-        },
-        {
-          name: '２',
-          mount: '神成山',
-          place: '富岡市',
-          course: '神農原―神成山ー南蛇井',
-          time: '2時間'
-        },
-        {
-          name: '３',
-          mount: '黒滝山',
-          place: '南牧村',
-          course: '不動寺ー観音岩(870)ー鷹巣山－不動寺',
-          time: '３時間半'
-        },
-        {
-          name: '４',
-          mount: '菅峰',
-          place: '東吾妻町',
-          course: '須賀尾峠ー菅峰（往復）',
-          time: '３時間'
-        },
-        {
-          name: '５',
-          mount: '嵩山',
-          place: '中之条町',
-          course: '東登山口-嵩山－東登山口',
-          time: '２時間半'
-        },
-        {
-          name: '６',
-          mount: '赤城五輪ハイキングコース',
-          place: '富士見村',
-          course: '大沼-五輪峠ｰ薬師岳ｰ出張峠ｰキャンプ場',
-          time: '３時間'
-        },
-        {
-          name: '７',
-          mount: '四阿屋山',
-          place: '両神村',
-          course: '薬師堂ー四阿屋山（往復）',
-          time: '３時間'
-        },
-        {
-          name: '８',
-          mount: '暑気払い',
-          place: '',
-          course: '',
-          time: ''
-        },
-        {
-          name: '９',
-          mount: '未定',
-          place: '',
-          course: '',
-          time: ''
-        },
-        {
-          name: '10',
-          mount: '泊り山行：弥彦山・角田山',
-          place: '新潟県',
-          course: '未定',
-          time: '未定'
-        },
-        {
-          name: '11',
-          mount: '備前楯山',
-          place: '足尾町',
-          course: 'かじか荘ー備前楯山（往復）',
-          time: '2時間30分'
-        },
-        {
-          name: '12',
-          mount: '忘年会',
-          place: '',
-          course: '',
-          time: ''
-        },
-      ],
     }
   }
 }

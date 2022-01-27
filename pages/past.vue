@@ -1,5 +1,8 @@
 <template>
   <div>
+    <v-container>
+      <v-row justify="center">
+        <v-col cols="12" sm="8" md="6">
     <img src="~assets/img/hiking.png" height="100">
     <div v-for="year in years" :key="yearname">
       <p class="mt-4 mb-1">{{year.yearname}}</p>
@@ -20,6 +23,14 @@
         </tbody>
       </table>
     </div>
+    <div class="post">
+      <p class="mt-5">以降は、平成6年～平成26年の月例山行</p>
+      <img src="~assets/img/kako1.png" >
+      <img src="~assets/img/kako2.png" >
+    </div>
+        </v-col>
+      </v-row>
+    </v-container>
   </div>
 </template>
 
@@ -84,7 +95,7 @@ export default {
           ]
         },
         {
-          yearname: '2019年',
+          yearname: '2019年（平成31年/令和元年）',
           months: [
             {
               name: '１',
@@ -139,7 +150,7 @@ export default {
           ]
         },
         {
-          yearname: '2018年',
+          yearname: '2018年（平成30年）',
           months: [
             {
               name: '１',
@@ -194,7 +205,7 @@ export default {
           ]
         },
         {
-          yearname: '2017年',
+          yearname: '2017年（平成29年）',
           months: [
             {
               name: '１',
@@ -249,7 +260,7 @@ export default {
           ]
         },
         {
-          yearname: '2016年',
+          yearname: '2016年（平成28年）',
           months: [
             {
               name: '１',
@@ -320,5 +331,10 @@ table {
 }
 thead {
   background-color: aqua;
+}
+.post img {
+  width:100%;
+  max-width: 100%;
+  height: auto;
 }
 </style>
