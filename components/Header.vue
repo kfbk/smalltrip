@@ -19,12 +19,7 @@
           </v-tab>
         </v-tabs>
       <v-spacer></v-spacer>
-      <div v-if="$store.state.loggedIn">
-        <v-btn color="primary" @click="logout()">ログアウト</v-btn>
-      </div>
-      <div v-else>
-        <v-btn color="primary" to="/login">ログイン</v-btn>
-      </div>
+      <v-btn>ログアウト</v-btn>
       </v-app-bar>
       <!-- ハンバーガーメニュー -->
       <v-navigation-drawer
@@ -76,20 +71,6 @@ export default {
           link: '/past'
         },
       ],
-    }
-  },
-  methods: {
-    logout() {
-      const auth = getAuth()
-      signOut(auth).then(() => {
-        // Sign-out successful.
-        // alert('サインアウトしました。')
-        this.$store.commit('logoutState')
-        this.$router.push('/logout')
-      }).catch((error) => {
-        // An error happened.
-        console.error(error)
-      })
     }
   }
 }

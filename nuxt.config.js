@@ -72,8 +72,7 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
-    '@nuxtjs/sitemap',
-    //'@nuxtjs/auth'
+    '@nuxtjs/sitemap', // 追加
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
