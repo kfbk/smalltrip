@@ -35,13 +35,9 @@
             </v-card-content>
           </v-card>
 
-          <table width="100%" class="mt-5">
+          <table class="mt-5">
             <tr>
-              <!-- <td><h1>小さな旅友の会 </h1></td> -->
-              <td class="blue darken-1">
-                <h1>「小さな旅友の会」会員募集</h1>
-                <h3 class="pl-5">お試し参加も可・お一人様も歓迎</h3>
-              </td>
+              <td><h1>小さな旅友の会 会員募集</h1></td>
             </tr>
           </table>
             <p class="ml-5 mt-1">
@@ -51,15 +47,14 @@
               スポーツ安全保険：<br>&nbsp;&nbsp;&nbsp;1200円／年（65歳以上）、1850円／年（65歳未満）<br>
               問い合わせページから問い合わせてください
             </p>
-          <table width="100%" class="mt-5">
+          <table class="mt-5">
             <tr>
-              <td>
-                <h1>「小さな旅友の会」紹介</h1>
-              </td>
+              <td><h1>小さな旅友の会 紹介</h1></td>
+              <td>2021年12月作成</td>
             </tr>
           </table>
 
-          <img src="~assets/img/2021-12-04 08.07.38.jpg"  class="mt-1 ml-5">
+          <img src="~assets/img/2021-12-04 08.07.38.jpg" class="mt-1">
           <p class="mt-1">
             平成4年1月に高崎市の山登り仲間を中心として結成され、<br>
             30年の歴史がある楽しい山登りの会です。<br>
