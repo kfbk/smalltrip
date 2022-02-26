@@ -18,11 +18,6 @@
             {{ menuItem.name }}
           </v-tab>
         </v-tabs>
-<<<<<<< HEAD
-=======
-      <v-spacer></v-spacer>
-      <v-btn>ログアウト</v-btn>
->>>>>>> parent of 989cd66 (動かない)
       </v-app-bar>
       <!-- ハンバーガーメニュー -->
       <v-navigation-drawer
