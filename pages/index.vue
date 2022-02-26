@@ -101,9 +101,9 @@ export default {
     )
     return data
   },
-  mounted() {
-    console.log(this.$store.getters.isAuthenticated)
-  }
+  // mounted() {
+  //   console.log(this.$store.getters.isAuthenticated)
+  // }
 }
 </script>
 

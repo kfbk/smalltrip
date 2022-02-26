@@ -18,6 +18,8 @@
             {{ menuItem.name }}
           </v-tab>
         </v-tabs>
+      <v-spacer></v-spacer>
+      <v-btn>ログアウト</v-btn>
       </v-app-bar>
       <!-- ハンバーガーメニュー -->
       <v-navigation-drawer
