@@ -38,7 +38,7 @@
           <table width="100%" class="mt-5">
             <tr>
               <!-- <td><h1>小さな旅友の会 </h1></td> -->
-              <td class="blue darken-1">
+              <td class="red darken-1">
                 <h1>「小さな旅友の会」会員募集</h1>
                 <h3 class="pl-5">お試し参加も可・お一人様も歓迎</h3>
               </td>
