@@ -73,11 +73,14 @@ export default {
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     '@nuxtjs/sitemap',
-    //'@nuxtjs/auth'  // これを生かすと、エラーになる
+    '@nuxtjs/auth'  // これを生かすと、エラーになる
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  axios: {},
+  axios: {
+    baseURL: 'http://localhost:5000/',
+    //baseURL: 'https://mongo-trip.herokuapp.com/',
+  },
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
@@ -116,4 +119,31 @@ export default {
       return pages
     }
   },
+  auth: {
+    redirect: {
+      // login: '/login',
+    //   logout: '/',
+    //   callback: false,
+    //   home: '/'
+      // ログイン正常後、表示するページ
+      home: '/success',
+    },
+    //次の説明＝https://qiita.com/kj455/items/66a1aab1524af51160ff
+    //strategiesの中身に認証ロジックを書いていく
+    strategies: {
+      //localという認証方法「emailアドレスとパスワードを入力してログイン」を使う場合
+      local: {
+        //axiosでアクセスする際の設定
+        endpoints: {
+          login: { url: '/api/auth/login', method: 'post', propertyName: 'token' },
+          // logout: { url: '/api/auth/logout', method: 'post' },
+          logout: false,
+          user: { url: '/api/auth/user', method: 'get', propertyName: 'user' }
+          // user: false, // これを生かすと、起動時に「/api/auth/user」しない
+        },
+        // tokenRequired: true,
+        // tokenType: 'bearer'
+      }
+    }
+  }
 }
