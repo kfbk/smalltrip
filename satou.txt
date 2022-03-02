@@ -124,3 +124,17 @@ nuxt-blog5を基本に作成
 
 その他
 	日付	https://devsakaso.com/nuxt-js-format-date/
+
+--------------------------------------------------------------------------
+2022/02/26 : login機能を付ける
+　フォルダー「smalltrip-corona」にて、firebaseを使ったLoginを作った。これを参照する。
+　ただし、firebaseはTest-modeで作り、30日以内に本番にするようなので、難しい
+　なので、nuxtjs/authを使し、mongoDBを使うことにした。
+　この実験用に、フォルダー「mongodb-sake」にて、クラウドのmongoDBにテーブルを作り、CRUDの実験した。
+　次の事を順次、行った。
+
+sourceTreeにて、Branchを追加。longin変更用とする
+
+npm install @nuxtjs/auth
+
+	これをインストールし、nuxt.config.jsに追加したら、エラー発生。直す方法が分からない。

@@ -73,7 +73,7 @@ export default {
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     '@nuxtjs/sitemap',
-    '@nuxtjs/auth'
+    //'@nuxtjs/auth'  // これを生かすと、エラーになる
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios

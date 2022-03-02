@@ -5,60 +5,58 @@
         <v-col cols="12" sm="8" md="6">
 
           <v-card>
-            <v-card-title>
+            <v-card-title class="blue darken-1 white--text">
               つぶやき最新情報
             </v-card-title>
-            <v-card-content>
+            <v-card-text class="blue lighten-5">
               <ul>
                 <li v-for="content in contents" :key="content.id">
                   <span>{{ new Date(content.publishedAt).toLocaleDateString() }}</span>
-        <nuxt-link :to="`/${content.id}`" style="text-decoration: none;">
-                  {{ content.title }}
+                  <nuxt-link :to="`/${content.id}`" style="text-decoration: none;">
+                    {{ content.title }}
                   </nuxt-link>
                 </li>
-                <!-- <li>
-                  2021/12/23:「過去の月例山行」ページ追加
-                </li>
-                <li>
-                  2021/11/30：つぶやき「赤城山（黒檜）」
-                </li>
-                <li>
-                  2021/11/24：つぶやき「2022年最初は桐生吾妻山）」
-                </li>
-                <li>
-                  2021/11/17：つぶやき「初参加」
-                </li>
-                <li>
-                  2021/11/17：ホームページ開設
-                </li> -->
               </ul>
-            </v-card-content>
+            </v-card-text>
           </v-card>
 
-          <table width="100%" class="mt-5">
+          <!-- <table width="100%" class="mt-5">
             <tr>
-              <!-- <td><h1>小さな旅友の会 </h1></td> -->
-              <td class="blue darken-1">
+              <td class="red darken-1">
                 <h1>「小さな旅友の会」会員募集</h1>
                 <h3 class="pl-5">お試し参加も可・お一人様も歓迎</h3>
               </td>
             </tr>
-          </table>
-            <p class="ml-5 mt-1">
+          </table> -->
+          <v-card>
+            <v-card-title class="mt-5 blue darken-1 white--text">
+              「小さな旅友の会」会員募集<br>
+              お試し参加も可・お一人様も歓迎
+            </v-card-title>
+            <v-card-text class="blue lighten-5">
               本会で、新規の仲間を募集しています<br/>
               入会金・年会費 無料<br>
               月例山行の参加費 基本５０００円<br>
               スポーツ安全保険：<br>&nbsp;&nbsp;&nbsp;1200円／年（65歳以上）、1850円／年（65歳未満）<br>
               問い合わせページから問い合わせてください
+            </v-card-text>
+          </v-card>
+            <p class="ml-5 mt-1">
             </p>
-          <table width="100%" class="mt-5">
+
+          <!-- <table width="100%" class="mt-5">
             <tr>
               <td>
-                <h1>「小さな旅友の会」紹介</h1>
+                <h1></h1>
               </td>
             </tr>
-          </table>
+          </table> -->
 
+          <v-card class="mt-5">
+            <v-card-title class="blue darken-1 white--text">
+              「小さな旅友の会」紹介
+            </v-card-title>
+            <v-card-text class="blue lighten-5">
           <img src="~assets/img/2021-12-04 08.07.38.jpg"  class="mt-1 ml-5">
           <p class="mt-1">
             平成4年1月に高崎市の山登り仲間を中心として結成され、<br>
@@ -81,6 +79,8 @@
             楽しい仲間とゆっくり山登りも良いのではないでしょうか？<br>
             一人で登る山もよし、仲間と登る山もよし！！<br>
           </p>
+            </v-card-text>
+          </v-card>
         </v-col>
       </v-row>
     </v-container>
