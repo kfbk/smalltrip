@@ -51,6 +51,7 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
+    '~/assets/css/style.css'
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -73,11 +74,12 @@ export default {
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     '@nuxtjs/sitemap',
-    '@nuxtjs/auth'  // これを生かすと、エラーになる
+    '@nuxtjs/auth'
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
+    // ローカルデバッグ・実働の切り替えは、ここだけ変更すること
     baseURL: 'http://localhost:5000/',
     //baseURL: 'https://mongo-trip.herokuapp.com/',
   },
@@ -126,7 +128,7 @@ export default {
     //   callback: false,
     //   home: '/'
       // ログイン正常後、表示するページ
-      home: '/success',
+      home: '/kaiin',
     },
     //次の説明＝https://qiita.com/kj455/items/66a1aab1524af51160ff
     //strategiesの中身に認証ロジックを書いていく

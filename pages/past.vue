@@ -1,36 +1,36 @@
 <template>
   <div>
-    <v-container>
-      <v-row justify="center">
-        <v-col cols="12" sm="8" md="6">
-    <img src="~assets/img/hiking.png" height="100">
-    <div v-for="year in years" :key="yearname">
-      <p class="mt-4 mb-1">{{year.yearname}}</p>
-      <table width="100%">
-        <thead>
-          <tr>
-            <th width="10%">月</th>
-            <th width="45%">山　名</th>
-            <th width="45%">場　所</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr v-for="month in year.months" :key="month.name">
-            <td>{{month.name}}</td>
-            <td>{{month.mount}}</td>
-            <td>{{month.place}}</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <div class="post">
-      <p class="mt-5">以降は、平成6年～平成26年の月例山行</p>
-      <img src="~assets/img/kako1.png" >
-      <img src="~assets/img/kako2.png" >
-    </div>
-        </v-col>
-      </v-row>
-    </v-container>
+    <!-- <v-container> -->
+    <v-row justify="center">
+      <v-col cols="12" sm="8" md="6">
+        <img src="~assets/img/hiking.png" height="100">
+        <div v-for="year in years" :key="year.yearname">
+          <p class="mt-4 mb-1">{{year.yearname}}</p>
+          <table width="100%">
+            <thead>
+              <tr>
+                <th width="10%">月</th>
+                <th width="45%">山　名</th>
+                <th width="45%">場　所</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr v-for="month in year.months" :key="month.name">
+                <td>{{month.name}}</td>
+                <td>{{month.mount}}</td>
+                <td>{{month.place}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="post">
+          <p class="mt-5">以降は、平成6年～平成26年の月例山行</p>
+          <img src="~assets/img/kako1.png" >
+          <img src="~assets/img/kako2.png" >
+        </div>
+      </v-col>
+    </v-row>
+    <!-- </v-container> -->
   </div>
 </template>
 

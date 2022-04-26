@@ -35,7 +35,7 @@
           <td>黒滝山</td>
           <td>南牧村</td>
           <td>不動寺ー観音岩(870)ー鷹巣山－不動寺</td>
-          <td>３時間半</td>
+          <td style="background-color:red;">コロナ中止</td>
         </tr>
         <tr>
           <td>４</td>

@@ -31,7 +31,7 @@
       </p>
       <p>
         <label>内容：
-          <textarea class="textlines" name="message"></textarea>
+          <textarea class="textlines text" name="message"></textarea>
         </label>
       </p>
       <p>
@@ -52,25 +52,6 @@
 
 <style>
 .textlines {
-    border: 2px solid #0a0;  /* 枠線 */
-    border-radius: 0.67em;   /* 角丸 */
-    padding: 0.5em;          /* 内側の余白量 */
-    background-color: snow;  /* 背景色 */
-    width: 100%;             /* 横幅いっぱいにする */
-    box-sizing: border-box;  /* ※これがないと横にはみ出る */
     height: 120px;           /* 高さ */
-    font-size: 1em;          /* 文字サイズ */
-    line-height: 1.2;        /* 行の高さ */
-}
-.text {
-    border: 2px solid #0a0;  /* 枠線 */
-    border-radius: 0.67em;   /* 角丸 */
-    padding: 0.5em;          /* 内側の余白量 */
-    background-color: snow;  /* 背景色 */
-    width: 100%;             /* 横幅いっぱいにする */
-    box-sizing: border-box;  /* ※これがないと横にはみ出る */
-    /* height: 120px;           高さ */
-    font-size: 1em;          /* 文字サイズ */
-    line-height: 1.2;        /* 行の高さ */
 }
 </style>
