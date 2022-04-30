@@ -1,6 +1,6 @@
 <template>
   <section>
-    <v-container>
+    <!-- <v-container> -->
       <v-row justify="center">
         <v-col cols="12" sm="8" md="6">
 
@@ -41,49 +41,41 @@
               問い合わせページから問い合わせてください
             </v-card-text>
           </v-card>
-            <p class="ml-5 mt-1">
-            </p>
-
-          <!-- <table width="100%" class="mt-5">
-            <tr>
-              <td>
-                <h1></h1>
-              </td>
-            </tr>
-          </table> -->
 
           <v-card class="mt-5">
             <v-card-title class="blue darken-1 white--text">
               「小さな旅友の会」紹介
             </v-card-title>
             <v-card-text class="blue lighten-5">
-          <img src="~assets/img/2021-12-04 08.07.38.jpg"  class="mt-1 ml-5">
-          <p class="mt-1">
-            平成4年1月に高崎市の山登り仲間を中心として結成され、<br>
-            30年の歴史がある楽しい山登りの会です。<br>
-            現在は、主に群馬県・埼玉県の日帰り登山をしております。<br>
-            会員は、65歳以上の高齢者ばかりの23名が加入しております。<br>
-            若手がいないのが悩みの種です。<br>
-          <p/>
-          <p>
-            <strong>最近（2021年）の活動について</strong><br>
-            毎月 第3日曜日<br>
-            高崎駅東口　7:30　集合、出発<br>
-            貸切バスをチャーター<br>
-            歩行時間は3時間半前後<br>
-            山登り・日帰り入浴・懇親会（アルコールは各自実費）<br>
-            バス代・日帰り入浴代込みで、参加費5,000円　当日徴収<br>
-            年1回10月に一泊二日でゆっくりと山登り<br>
-          <p/>
-          <p>
-            楽しい仲間とゆっくり山登りも良いのではないでしょうか？<br>
-            一人で登る山もよし、仲間と登る山もよし！！<br>
-          </p>
+              <div class="post">
+                <img src="~assets/img/2021-12-04 08.07.38.jpg"  class="mt-1 justify-center">
+              </div>
+              <p class="mt-1">
+                平成4年1月に高崎市の山登り仲間を中心として結成され、<br>
+                30年の歴史がある楽しい山登りの会です。<br>
+                現在は、主に群馬県・埼玉県の日帰り登山をしております。<br>
+                会員は、65歳以上の高齢者ばかりの23名が加入しております。<br>
+                若手がいないのが悩みの種です。<br>
+              <p/>
+              <p>
+                <strong>最近（2021年）の活動について</strong><br>
+                毎月 第3日曜日<br>
+                高崎駅東口　7:30　集合、出発<br>
+                貸切バスをチャーター<br>
+                歩行時間は3時間半前後<br>
+                山登り・日帰り入浴・懇親会（アルコールは各自実費）<br>
+                バス代・日帰り入浴代込みで、参加費5,000円　当日徴収<br>
+                年1回10月に一泊二日でゆっくりと山登り<br>
+              <p/>
+              <p>
+                楽しい仲間とゆっくり山登りも良いのではないでしょうか？<br>
+                一人で登る山もよし、仲間と登る山もよし！！<br>
+              </p>
             </v-card-text>
           </v-card>
         </v-col>
       </v-row>
-    </v-container>
+    <!-- </v-container> -->
   </section>
 </template>
 
@@ -102,7 +94,11 @@ export default {
     return data
   },
   mounted() {
-    console.log(this.$store.getters.isAuthenticated)
+    console.log(this.$auth.loggedIn)
+    if (this.$auth.loggedIn)
+      console.log(this.$auth.user.name)
+    // console.log('===satou mounted==')
+    // console.log(this.$store.getters.isAuthenticated)
   }
 }
 </script>
