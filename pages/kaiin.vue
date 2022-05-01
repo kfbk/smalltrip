@@ -75,8 +75,8 @@
                   :items="users"
                   :sort-by="'order'"
                   :sort-desc="false"
+                  mobile-breakpoint="100"
                   class="mt-5 elevation-13"
-                  width="100%"
               ></v-data-table>
             </div>
           </v-card-text>
@@ -132,10 +132,10 @@ export default {
             align: 'start',
             sortable: false,
             value: 'order',
-            width: "30%"
+            width: '30%'
           },
-          { text: '名前', sortable: false, value: 'name', width: "40%" },
-          { text: '参加状態', sortable: false, value: 'join', width: "30%" },
+          { text: '名前', sortable: false, value: 'name', width: '40%' },
+          { text: '参加状態', sortable: false, value: 'join', },
         ],
       users: [],  // 全員の「参加状態」
       level: '',  // 管理者（２）を特定する
