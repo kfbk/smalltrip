@@ -138,3 +138,34 @@ sourceTreeにて、Branchを追加。longin変更用とする
 npm install @nuxtjs/auth
 
 	これをインストールし、nuxt.config.jsに追加したら、エラー発生。直す方法が分からない。
+
+これ以降、上手く行った。ただし、説明はなし。
+
+--------------------------------------------------------------------------
+2022/05/10	会員ページの月例山行の出欠が1か月しかなかったが、毎月行うよう変更
+
+変更前
+
+Loginした時
+	/api/auth/login
+	/api/auth/user/
+	/api/user/join
+参加にチェックし決定
+	{ _id: '6264e95cd61df7c2995c14fd', join: '参加', joinMonth: 5 }
+	/join/update
+6月にして予定月変更
+	/api/users
+	{ _id: '6264e95cd61df7c2995c14fd', join: '未定', joinMonth: 6 }
+	{ _id: '6270767d4f66485f806a0425', join: '未定', joinMonth: 6 }
+	{ _id: '626661f1bfe876c2c8aa8ea4', join: '未定', joinMonth: 6 }
+	{ _id: '62766b363a6f396c4be4a4e2', join: '未定', joinMonth: 6 }
+	{ _id: '62666214bfe876c2c8aa8ea6', join: '未定', joinMonth: 6 }
+	/join/update
+	/join/update
+	/join/update
+	/join/update
+	/join/update
+
+変更後
+
+

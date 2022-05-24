@@ -74,7 +74,7 @@
         </tr>
         <tr>
           <td>９</td>
-          <td未定</td>
+          <td>芳が平</td>
           <td></td>
           <td></td>
           <td></td>

@@ -30,7 +30,7 @@ export default {
   async asyncData() {
     const { data } = await axios.get(
       // your-service-id部分は自分のサービスidに置き換えてください
-      'https://smalltrip.microcms.io/api/v1/blog',
+      'https://smalltrip.microcms.io/api/v1/blog?limit=100',
       {
         // your-api-key部分は自分のapi-keyに置き換えてください
         headers: { 'X-MICROCMS-API-KEY': process.env.API_KEY }

@@ -4,7 +4,7 @@
     <v-col cols="12" sm="8" md="6">
       <v-card elevation="13">
         <v-card-title>
-            ユーザ情報変更
+            会員情報変更
         </v-card-title>
         <v-card-subtitle>
           Passwordの変更が現状、出来ません。<br>
@@ -44,7 +44,7 @@
               <v-radio :value="2" label="管理者"></v-radio>
             </v-radio-group>
             <!-- 登録ボタン -->
-            <v-btn color="primary mt-5" type="submit">保存</v-btn>
+            <v-btn disabled color="primary mt-5" type="submit">保存</v-btn>
             <v-btn color="primary mt-5" to="/kaiin">戻る</v-btn>
             {{errMsg}}
           </form>
@@ -63,7 +63,7 @@
         user:{
           name: this.$auth.user.name,
           email: this.$auth.user.email,
-          password: '',
+          // password: '',       // 今の所、変更できない
           order: '',    // 2022.4.24 表示順（1～999）
           tel: '',      // 2022.4.10
           level: '',     // 2022.4.10
@@ -72,11 +72,11 @@
       }
     },
     mounted() {
-      this.user.password = this.$store.getters.password
+      // this.user.password = this.$store.getters.password   // 今の所、変更できない
       this.user.order = this.$store.getters.order   // 2022.4.24
       this.user.tel = this.$store.getters.tel
       this.user.level = this.$store.getters.level
-      console.log(this.user.order,'tel=',this.user.tel,'level=',this.user.level)
+      // console.log(this.user.order,'tel=',this.user.tel,'level=',this.user.level)
     },
     methods:{
       // onInput() {
@@ -94,7 +94,7 @@
         // this.user.joinMonth = this.$store.getters.joinMonth
         // console.log(this.user.joinMonth)
         // return
-        console.log(this.user.tel, this.user.level)
+        // console.log(this.user.tel, this.user.level)
         this.$axios.put('/api/update/user', {
           _id: this.$auth.user.id,
           name: this.user.name,
@@ -114,8 +114,8 @@
               this.$store.commit("tel", this.user.tel);
               this.$store.commit("level", this.user.level);
               this.$store.commit("order", this.user.order);
-              this.$auth.user.name = this.user.name
-              console.log(response)
+              // this.$auth.user.name = this.user.name
+              this.$auth.user.email = this.user.email
               // this.stat = response.status
           })
           .catch((error) => {

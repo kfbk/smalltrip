@@ -72,12 +72,12 @@ export default {
     //   }
     // },
       async loginUser() {
-        console.log('loginUser ON')
+        // console.log('loginUser ON')
         this.$store.commit("password", this.user.password);
         try {
           const response = await this.$auth.loginWith('local', { data:this.user });
           // const msg = response.data.msg;
-          console.log(this.user.password, response );
+          // console.log(this.user.password, response );
           // {token: 'eyJhb...6uo'}
           //リダイレクト先をhome: falseにする-->それでも!msgの場合はhomeにリダイレクトする
           // 現在「home: '/kaiin'」としている

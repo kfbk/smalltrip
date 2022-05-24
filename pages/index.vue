@@ -93,13 +93,13 @@ export default {
     )
     return data
   },
-  mounted() {
-    console.log(this.$auth.loggedIn)
-    if (this.$auth.loggedIn)
-      console.log(this.$auth.user.name)
+  // mounted() {
+    // console.log(this.$auth.loggedIn)
+    // if (this.$auth.loggedIn)
+      // console.log(this.$auth.user.name)
     // console.log('===satou mounted==')
     // console.log(this.$store.getters.isAuthenticated)
-  }
+  // }
 }
 </script>
 

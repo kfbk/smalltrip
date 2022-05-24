@@ -4,13 +4,13 @@
     <v-col cols="12" sm="8" md="6">
       <v-card elevation="13">
         <v-card-title>
-            ユーザ登録
+            会員登録
         </v-card-title>
         <v-card-text>
           <form @submit.prevent="registerUser">
             <!-- 登録順 -->
             <div class="form-group">
-              <label for="order">登録順（半角 1～999）:</label>
+              <label for="order">登録順（半角、重ならない番号）:</label>
               <input class="text" v-model="user.order" @input="onInput">
             </div>
             <!-- 姓名 -->
@@ -30,7 +30,7 @@
             </div>
             <!-- 電話番号 -->
             <div class="form-group">
-              <label for="password">電話番号（半角）:</label>
+              <label for="password">電話番号（半角、なくても可）:</label>
               <input class="text" v-model="user.tel" @input="onInput">
             </div>
             <!-- level -->
