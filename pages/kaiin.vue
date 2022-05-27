@@ -2,18 +2,36 @@
   <div>
     <v-row justify="center">
       <v-col cols="12" sm="8" md="6">
-        <h1>会員専用のページ</h1>
-
-        <!-- 山登りの予定 -->
-        <v-card elevation="13">
-          <v-card-title>
-            {{$store.getters.joinMonth}} 月の予定
-            <div v-if="isLoading">
+            <span v-if="isLoading">
               <v-progress-circular
                 indeterminate
                 color="primary"
               ></v-progress-circular>
-            </div>
+            </span>
+        <h1>
+            会員専用のページ
+        </h1>
+
+        <!-- 会長の注意事項 -->
+        <v-card elevation="13">
+          <v-card-text>
+      <div v-for="content in contents" :key="content.id">
+        <nuxt-link :to="`/${content.id}`" style="text-decoration: none;">
+          <v-card class="mt-1" elevation="13" color="primary">
+            <v-card-title style="color: white;">
+              {{ content.title }}
+            </v-card-title>
+          </v-card>
+          <p>{{ new Date(content.updatedAt).toLocaleDateString() }}</p>
+        </nuxt-link>
+      </div>
+          </v-card-text>
+        </v-card>
+
+        <!-- 山登りの予定 -->
+        <v-card elevation="13" class="mt-5">
+          <v-card-title>
+            {{$store.getters.joinMonth}} 月の予定
           </v-card-title>
           <v-card-text>
             <!-- <v-btn @click="test1Btn">btn1</v-btn>
@@ -129,6 +147,17 @@ export default {
       sankaMsg: '参加・不参加を決めたら「決定」ボタンを押して下さい',
       isLoading:true,
     }
+  },
+  async asyncData() {
+    const { data } = await axios.get(
+      // your-service-id部分は自分のサービスidに置き換えてください
+      'https://smalltrip.microcms.io/api/v1/news?limit=1',
+      {
+        // your-api-key部分は自分のapi-keyに置き換えてください
+        headers: { 'X-MICROCMS-API-KEY': process.env.API_KEY }
+      }
+    )
+    return data
   },
   // created() {
   // mounted() {
@@ -344,16 +373,22 @@ export default {
       }
       this.$store.commit("joinMonth", month)
       // データベースを更新する
-      const response = this.$axios.put('/api/update/setvalue', {
+      const response = await this.$axios.put('/api/update/setvalue', {
         name: "Setvalue",
         joinYear: year,
         joinMonth: month
-      }).then((response) => {
-        // console.log('response=', response)
       })
-      .catch(err => {
-        console.log('satou4 ' + 'err:', err);
-      });
+      console.log('response=', response)
+      if (response.status == 200) {
+      } else {
+        // 未処理
+      }
+      // .then((response) => {
+      //   // console.log('response=', response)
+      // })
+      // .catch(err => {
+      //   console.log('satou4 ' + 'err:', err);
+      // });
 
       //  ３．全会員のorder（会員番号）を求める（退会者は除く）
       let nameSets = []
@@ -388,17 +423,22 @@ export default {
   //       })
         //  ４．1人ずつ新しい月と未定を全員に対し行う
         for (let i=0; i<orders.length; i++) {
-          this.$axios.post('/api/confirm/create', {
+          let response = await this.$axios.post('/api/confirm/create', {
             order: orders[i],
             joinYear: year,
             joinMonth: month,
             join: '未定'
-          }).then((response) => {
-            // console.log(orders[i], 'confirm=', response)
           })
-          .catch(err => {
-            console.log('satou5 ' + 'err:', err);
-          });
+          if (response.status == 200) {
+          } else {
+            未処理
+          }
+          // .then((response) => {
+          //   // console.log(orders[i], 'confirm=', response)
+          // })
+          // .catch(err => {
+          //   console.log('satou5 ' + 'err:', err);
+          // });
         }
         this.$store.commit("join", '未定')
           // IDが正常に求まったので、そのIDを使って、予定＝'未定'と月を設定する

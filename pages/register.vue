@@ -29,10 +29,10 @@
               <input class="text" type="password" v-model="user.password" @input="onInput">
             </div>
             <!-- 電話番号 -->
-            <div class="form-group">
+            <!-- <div class="form-group">
               <label for="password">電話番号（半角、なくても可）:</label>
               <input class="text" v-model="user.tel" @input="onInput">
-            </div>
+            </div> -->
             <!-- level -->
             <v-radio-group v-model="user.level" row>
               <v-radio :value="0" label="準会員"></v-radio>
@@ -85,23 +85,35 @@
         console.log('clear stat')
       },
       // 登録 ボタンON
-      registerUser(){
+      async registerUser(){
         this.user.joinMonth = this.$store.getters.joinMonth
         // console.log(this.user.joinMonth)
         // return
-        this.$axios.post('/api/auth/register',this.user)
-          .then((response) => {
-              // ユーザ登録後、そのユーザに変わる必要ないので、次はコメントにする
-              // this.$auth.loginWith('local',{
-              //     data: this.user
-              // })
-              console.log(response.status)
-              this.stat = response.status
+        let response = await this.$axios.post('/api/auth/register',this.user)
+          // .then((response) => {
+          //     // ユーザ登録後、そのユーザに変わる必要ないので、次はコメントにする
+          //     // this.$auth.loginWith('local',{
+          //     //     data: this.user
+          //     // })
+          //     console.log(response.status)
+          //     this.stat = response.status
+          // })
+          // .catch((error) => {
+          //   console.log(error)
+          //   // this.valid = true
+          // })
+        if (response.status == 200) {
+          this.stat = response.status
+        } else {
+          // 未処理
+        }
+        response = await this.$axios.post('/api/confirm/create', {
+            order: this.user.order,
+            joinYear: this.$store.getters.joinYear,
+            joinMonth: this.$store.getters.joinMonth,
+            join: '未定'
           })
-          .catch((error) => {
-            console.log(error)
-            // this.valid = true
-          })
+        console.log('registerUser.response=', response)
       },
     }
   }

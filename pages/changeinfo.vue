@@ -33,10 +33,10 @@
               <input class="text" type="password" v-model="user.password">
             </div> -->
             <!-- 電話番号 -->
-            <div class="form-group">
+            <!-- <div class="form-group">
               <label for="password">電話番号（半角）:</label>
               <input class="text" v-model="user.tel">
-            </div>
+            </div> -->
             <!-- level -->
             <v-radio-group v-model="user.level" row>
               <v-radio :value="0" label="準会員"></v-radio>
