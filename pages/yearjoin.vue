@@ -4,8 +4,17 @@
     <v-col cols="12" sm="8" md="6">
       <v-card elevation="13">
         <v-card-title>
+            <span v-if="isLoading">
+              <v-progress-circular
+                indeterminate
+                color="primary"
+              ></v-progress-circular>
+            </span>
               年の参加状態
         </v-card-title>
+        <v-card-subtitle>
+          1：参加　0：不参加　空白：未定
+        </v-card-subtitle>
         <v-card-text>
               <v-data-table
                   :headers="headers"
@@ -105,6 +114,7 @@
           },
         ],
         joins: [],
+        isLoading:true,
       }
     },
     async mounted() {
@@ -139,81 +149,85 @@
       this.joins = joins
       // for (let i=1; i<2; i++) {
       //   // 指定の年月の全員のデータを取る
-  let i=6
-  try {
+    for (let rx_month=1; rx_month<=12; rx_month++) {
+      try {
         let response = await this.$axios.post('/api/joins/get', {
             joinYear: this.$store.getters.joinYear,
-            joinMonth: i
+            joinMonth: rx_month
         })
         // .then((response) => {
         // order, join が得られる
+        if (response.length == 0) continue;
         if (response.status == 200) {
-          console.log(response.data)
-          console.log(response.data[i-1].order)     // 受信データの会員番号
-          console.log(response.data.length)
+          // console.log(response.data)
           // 受信データの会員番号（order）と月データ（i）の交点に、受信データの出欠（join）が参加の場合のみ’１’を入れる
           for (let j=0; j<response.data.length; j++) {
             // テーブルデータ（joins）から、受信データの会員番号と同じものを探す
-            let index = this.joins.findIndex( item => item.order == response.data[i-1].order);
+            let rx_order = response.data[j].order     // 受信データの会員番号
+            let index = this.joins.findIndex( item => item.order == rx_order);
             if (index != -1) {
-              console.log(joins[index])
-              console.log(response.data[i-1].join)
-              let month = 'm' + String(i)
-              console.log(month)
-              if (response.data[i-1].join === '参加') {
-                // console.log('>>>', this.joins[index].month, '<<<')
-                // this.joins[index].month = '1'
-                // console.log('>>>', this.joins[index].month, '<<<')
-                // オブジェクト名を変数にする方法が分からないので、ずらずら書いた
-                switch (i) {
+              // console.log(joins[index].order)
+              // console.log(response.data[j].join)
+              let month = 'm' + String(rx_month)
+              let val
+              // console.log(month)
+              if (response.data[j].join === '参加') val = 1
+              else if (response.data[j].join === '不参加') val = 0
+              else continue
+            //     // console.log('>>>', this.joins[index].month, '<<<')
+            //     // this.joins[index].month = '1'
+            //     // console.log('>>>', this.joins[index].month, '<<<')
+            //     // オブジェクト名を変数にする方法が分からないので、ずらずら書いた
+                switch (rx_month) {
                   case 1:
-                    this.joins[index].m1 = 1;
+                    this.joins[index].m1 = val;
                     break;
                   case 2:
-                    this.joins[index].m2 = 1;
+                    this.joins[index].m2 = val;
                     break;
                   case 3:
-                    this.joins[index].m3 = 1;
+                    this.joins[index].m3 = val;
                     break;
                   case 4:
-                    this.joins[index].m4 = 1;
+                    this.joins[index].m4 = val;
                     break;
                   case 5:
-                    this.joins[index].m5 = 1;
+                    this.joins[index].m5 = val;
                     break;
                   case 6:
-                    this.joins[index].m6 = 1;
+                    this.joins[index].m6 = val;
                     break;
                   case 7:
-                    this.joins[index].m7 = 1;
+                    this.joins[index].m7 = val;
                     break;
                   case 8:
-                    this.joins[index].m8 = 1;
+                    this.joins[index].m8 = val;
                     break;
                   case 9:
-                    this.joins[index].m9 = 1;
+                    this.joins[index].m9 = val;
                     break;
                   case 10:
-                    this.joins[index].m10 = 1;
+                    this.joins[index].m10 = val;
                     break;
                   case 11:
-                    this.joins[index].m11 = 1;
+                    this.joins[index].m11 = val;
                     break;
                   case 12:
-                    this.joins[index].m12 = 1;
+                    this.joins[index].m12 = val;
                     break;
                 }
-              }
-              break;
             }
           }
         } else {
-          console.log(response.status)
+          console.log('エラー発生 status=', response.status)
+          return
         }
       } catch (e) {
-        console.log('エラー発生', e);
+        console.log('エラー発生 ', rx_month, '月');
         return;
       }
+    }
+    this.isLoading = false
       //     // 会員番号・会員名を得る
       //     let nameSets = []
       //     nameSets = this.$store.getters.nameSets   // 退会者は除いてある

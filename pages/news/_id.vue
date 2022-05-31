@@ -30,7 +30,8 @@ import axios from 'axios'
 export default {
   async asyncData({ params }) {
     const { data } = await axios.get(
-      `https://smalltrip.microcms.io/api/v1/news/${params.news}`,
+      // `https://smalltrip.microcms.io/api/v1/news/${params.id}`,
+      `https://smalltrip.microcms.io/api/v1/posts?filters=career[equals]${params.id}`,
       {
         headers: { 'X-MICROCMS-API-KEY': process.env.API_KEY }
       }

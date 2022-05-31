@@ -92,7 +92,7 @@
           <v-card-title>会員情報</v-card-title>
           <v-card-text>
             <v-btn color="primary" to="/changeinfo">
-              自分の情報変更
+              自分の情報
             </v-btn>
             <v-btn color="primary" @click="taikai">
               退会

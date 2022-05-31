@@ -16,14 +16,14 @@
     <v-btn @click="SignIn"> ログイン </v-btn> -->
             <form @submit.prevent="loginUser">
               <div class="form-group">
-                <label for="email">Email:</label>
+                <label for="email">ID</label>
                 <input class="text" v-model="user.email">
               </div>
               <div class="form-group">
-                <label for="password">Password:</label>
+                <label for="password">Password</label>
                 <input class="text" type="password" v-model="user.password">
               </div>
-              <v-btn color="primary mt-5" type="submit">ログイン</v-btn>
+              <v-btn color="primary mt-5" type="submit" :disabled="btnDisabled">ログイン</v-btn>
               <span>{{errMsg}}</span>
             </form>
           </v-card-text>
@@ -47,6 +47,7 @@ export default {
         errMsg: '　',
       valid: false, //打ち込んだメールアドレス・パスワードが正しくない時はtrue、正しい時はfasle
       validError: "メールアドレスまたはパスワードが間違っています", //validがtrueの時に表示するメッセージ
+      btnDisabled: false
     }
   },
   methods: {
@@ -72,7 +73,8 @@ export default {
     //   }
     // },
       async loginUser() {
-        // console.log('loginUser ON')
+        this.btnDisabled = true
+        // console.log(this.user.password)
         this.$store.commit("password", this.user.password);
         try {
           const response = await this.$auth.loginWith('local', { data:this.user });
@@ -92,7 +94,8 @@ export default {
         } catch(error) {
           // 登録ユーザない場合・パスワード違いの場合、ここに来る（共にerror=403）
           // console.log('satou'+error);
-          this.errMsg = 'Email または Password が違います'
+          this.errMsg = 'ID または Password が違います'
+          this.btnDisabled = false
         }
       },
     //メールアドレス形式で入力をチェック

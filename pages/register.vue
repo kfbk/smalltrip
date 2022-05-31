@@ -10,7 +10,7 @@
           <form @submit.prevent="registerUser">
             <!-- 登録順 -->
             <div class="form-group">
-              <label for="order">登録順（半角、重ならない番号）:</label>
+              <label for="order">会員番号（半角）：間違えて登録した場合、管理者に連絡</label>
               <input class="text" v-model="user.order" @input="onInput">
             </div>
             <!-- 姓名 -->
@@ -20,7 +20,7 @@
             </div>
             <!-- Email -->
             <div class="form-group">
-              <label for="email">Email（半角）:</label>
+              <label for="email">ID（半角）:</label>
               <input class="text" v-model="user.email" @input="onInput">
             </div>
             <!-- Password -->
