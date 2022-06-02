@@ -7,15 +7,15 @@
       <v-card-title>
         {{ title }}
               <v-spacer />
-      <v-btn to="/kaiin" color="primary">戻る</v-btn>
-      <!-- <a @click="$router.back()">戻る</a> -->
+      <!-- <v-btn to="/blog" nuxt>戻る</v-btn> -->
+      <a @click="$router.back()">戻る</a>
     </v-card-title>
     <v-card-subtitle>
-      {{ new Date(updatedAt).toLocaleDateString() }}
+      {{ new Date(publishedAt).toLocaleDateString() }} {{ nickname }}
     </v-card-subtitle>
     <hr>
     <v-card-text>
-    <div class="post" v-html="content"></div>
+    <div class="post" v-html="body"></div>
     </v-card-text>
     </v-card>
         </v-col>
@@ -30,7 +30,8 @@ import axios from 'axios'
 export default {
   async asyncData({ params }) {
     const { data } = await axios.get(
-      `https://smalltrip.microcms.io/api/v1/news/${params.id}`,
+      // `https://smalltrip.microcms.io/api/v1/blog/${params.slug}`,
+      `https://smalltrip.microcms.io/api/v1/blog/${params.id}`,
       {
         headers: { 'X-MICROCMS-API-KEY': process.env.API_KEY }
       }
@@ -39,3 +40,12 @@ export default {
   }
 }
 </script>
+
+// scoped を付けると画像がレシポンシブにならない
+<style>
+.post img {
+  width:100%;
+  max-width: 100%;
+  height: auto;
+}
+</style>

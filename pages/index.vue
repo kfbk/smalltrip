@@ -10,10 +10,10 @@
             </v-card-title>
             <v-card-text class="blue lighten-5">
               <ul>
-                <li v-for="content in contents" :key="content.id">
-                  <span>{{ new Date(content.publishedAt).toLocaleDateString() }}</span>
-                  <nuxt-link :to="`/${content.id}`" style="text-decoration: none;">
-                    {{ content.title }}
+                <li v-for="(item,key) in items" :key="key">
+                  <span>{{ new Date(item.publishedAt).toLocaleDateString() }}</span>
+                  <nuxt-link :to="'article/' + item.id" style="text-decoration: none;">
+                    {{ item.title }}
                   </nuxt-link>
                 </li>
               </ul>
@@ -82,6 +82,11 @@
 <script>
 import axios from 'axios'
 export default {
+  data() {
+    return {
+      items: []
+    }
+  },
   async asyncData() {
     const { data } = await axios.get(
       // your-service-id部分は自分のサービスidに置き換えてください
@@ -91,7 +96,9 @@ export default {
         headers: { 'X-MICROCMS-API-KEY': process.env.API_KEY }
       }
     )
-    return data
+    return {
+      items: data.contents
+    }
   },
   // mounted() {
     // console.log(this.$auth.loggedIn)

@@ -107,18 +107,19 @@ export default {
   build: {
   },
   generate: {
-    async routes() {
-      const pages = await axios
-        .get('https://smalltrip.microcms.io/api/v1/blog?limit=100', {
+    routes() {
+      const blogs = axios
+        .get('https://smalltrip.microcms.io/api/v1/blog', {
           headers: { 'X-MICROCMS-API-KEY': process.env.API_KEY }
         })
-        .then((res) =>
-          res.data.contents.map((content) => ({
-            route: `/${content.id}`,
-            payload: content
-          }))
-        )
-      return pages
+        .then((res) => {
+          return res.data.contents.map((blogs) => {
+            return "/article/" + blogs.id;
+          })
+        })
+      return Promise.all([blogs]).then(values => {
+        return values.join().split(",")
+      })
     }
   },
   auth: {
