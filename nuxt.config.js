@@ -122,7 +122,7 @@ export default {
           headers: { 'X-MICROCMS-API-KEY': process.env.API_KEY }
         })
         .then((res) => {
-          return res.data.contents.map((blogs) => {
+          return res.data.contents.map((news) => {
             return "/news/" + news.id;
           })
         })
