@@ -16,7 +16,7 @@
         <v-card elevation="13">
           <v-card-text>
       <div v-for="content in contents" :key="content.id">
-        <nuxt-link :to="`/${content.id}`" style="text-decoration: none;">
+        <nuxt-link :to="'news/' + content.id" style="text-decoration: none;">
           <v-card class="mt-1" elevation="13" color="primary">
             <v-card-title style="color: white;">
               {{ content.title }}

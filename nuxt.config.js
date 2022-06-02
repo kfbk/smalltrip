@@ -117,7 +117,16 @@ export default {
             return "/article/" + blogs.id;
           })
         })
-      return Promise.all([blogs]).then(values => {
+        const news = axios
+        .get('https://smalltrip.microcms.io/api/v1/news', {
+          headers: { 'X-MICROCMS-API-KEY': process.env.API_KEY }
+        })
+        .then((res) => {
+          return res.data.contents.map((blogs) => {
+            return "/news/" + news.id;
+          })
+        })
+      return Promise.all([blogs,news]).then(values => {
         return values.join().split(",")
       })
     }
