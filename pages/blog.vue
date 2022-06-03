@@ -3,9 +3,12 @@
     <v-container>
       <v-row justify="center">
         <v-col cols="12" sm="8" md="6">
-    <h1>つぶやき一覧</h1>
+    <h1>つぶやき一覧
+      <span style="font-size: 16px;">（最大100件）</span>
+    </h1>
+
+    <!-- 何故か、次はエラーになる。
     <ul>
-      <!-- 何故か、次はエラーになる。下は、index.vueから持ってきた
       <li v-for="(item,key) in items" :key="key">
         <nuxt-link :to="'article/' + item.id" style="text-decoration: none;">
           <v-card class="mt-2">
@@ -17,14 +20,21 @@
             </v-card-subtitle>
           </v-card>
         </nuxt-link>
-      </li> -->
-                <li v-for="(item,key) in items" :key="key">
-                  <span>{{ new Date(item.publishedAt).toLocaleDateString() }}</span>
-                  <nuxt-link :to="'article/' + item.id" style="text-decoration: none;">
-                    {{ item.title }}
-                  </nuxt-link>
-                </li>
-    </ul>
+      </li>
+    </ul> -->
+    <table>
+      <tbody>
+      <tr v-for="(item,key) in items" :key="key">
+        <td>{{ new Date(item.publishedAt).toLocaleDateString() }}</td>
+        <td>
+          <nuxt-link :to="'article/' + item.id" style="text-decoration: none;">
+            {{ item.title }}
+          </nuxt-link>
+        </td>
+        <td>{{ item.nickname }}</td>
+      </tr>
+      </tbody>
+    </table>
         </v-col>
       </v-row>
     </v-container>
@@ -54,3 +64,12 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+table, td, th {
+    border-bottom: 1px solid black;
+}
+table {
+    border-collapse: collapse;
+}
+</style>

@@ -10,7 +10,7 @@
                 color="primary"
               ></v-progress-circular>
             </span>
-              年の参加状態
+            年の参加状態 <span style="color: red;">{{errMsg}}</span>
         </v-card-title>
         <v-card-subtitle>
           1：参加　0：不参加　空白：未定
@@ -115,6 +115,7 @@
         ],
         joins: [],
         isLoading:true,
+        errMsg: '',
       }
     },
     async mounted() {
@@ -220,10 +221,14 @@
           }
         } else {
           console.log('エラー発生 status=', response.status)
+          errMsg = 'エラー発生 status='+ response.status
+          this.isLoading = false
           return
         }
       } catch (e) {
-        console.log('エラー発生 ', rx_month, '月');
+        // console.log('エラー発生 ', rx_month, '月');
+        errMsg = 'エラー発生 '+ rx_month+ '月'
+        this.isLoading = false
         return;
       }
     }
@@ -255,7 +260,5 @@
       //   }
       // }
     },
-    methods:{
-    }
   }
 </script>

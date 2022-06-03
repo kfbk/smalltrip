@@ -24,7 +24,7 @@
                 <input class="text" type="password" v-model="user.password">
               </div>
               <v-btn color="primary mt-5" type="submit" :disabled="btnDisabled">ログイン</v-btn>
-              <span>{{errMsg}}</span>
+              <span style="color: red;">{{errMsg}}</span>
             </form>
           </v-card-text>
         </v-card>
@@ -40,13 +40,13 @@ export default {
     return {
       // mailAddress: '',
       // password: '',
-        user:{
-          email:'',
-          password:''
-        },
-        errMsg: '　',
-      valid: false, //打ち込んだメールアドレス・パスワードが正しくない時はtrue、正しい時はfasle
-      validError: "メールアドレスまたはパスワードが間違っています", //validがtrueの時に表示するメッセージ
+      user:{
+        email:'',
+        password:''
+      },
+      errMsg: '',
+      // valid: false, //打ち込んだメールアドレス・パスワードが正しくない時はtrue、正しい時はfasle
+      // validError: "メールアドレスまたはパスワードが間違っています", //validがtrueの時に表示するメッセージ
       btnDisabled: false
     }
   },
@@ -74,6 +74,7 @@ export default {
     // },
       async loginUser() {
         this.btnDisabled = true
+        this.errMsg = '時間が掛かります'
         // console.log(this.user.password)
         this.$store.commit("password", this.user.password);
         try {

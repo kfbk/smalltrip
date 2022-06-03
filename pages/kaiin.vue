@@ -2,29 +2,30 @@
   <div>
     <v-row justify="center">
       <v-col cols="12" sm="8" md="6">
-            <span v-if="isLoading">
-              <v-progress-circular
+        <span v-if="isLoading">
+          <v-progress-circular
                 indeterminate
                 color="primary"
-              ></v-progress-circular>
-            </span>
+          ></v-progress-circular>
+        </span>
         <h1>
-            会員専用のページ
+          会員専用のページ
         </h1>
 
         <!-- 会長の注意事項 -->
         <v-card elevation="13">
           <v-card-text>
-      <div v-for="content in contents" :key="content.id">
-        <nuxt-link :to="'/news/' + content.id" style="text-decoration: none;">
-          <v-card class="mt-1" elevation="13" color="primary">
-            <v-card-title style="color: white;">
-              {{ content.title }}
-            </v-card-title>
-          </v-card>
-          <p>{{ new Date(content.updatedAt).toLocaleDateString() }}</p>
-        </nuxt-link>
-      </div>
+            <div v-for="content in contents" :key="content.id">
+              <!-- 'news/'のままだとURLにkaiinが入ってしまう -->
+              <nuxt-link :to="'/news/' + content.id" style="text-decoration: none;">
+                <v-card class="mt-1" elevation="13" color="primary">
+                  <v-card-title style="color: white;">
+                    {{ content.title }}
+                  </v-card-title>
+                </v-card>
+                <p>{{ new Date(content.updatedAt).toLocaleDateString() }}</p>
+              </nuxt-link>
+            </div>
           </v-card-text>
         </v-card>
 

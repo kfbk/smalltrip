@@ -4,7 +4,7 @@
     <v-col cols="12" sm="8" md="6">
       <v-card elevation="13">
         <v-card-title>
-          {{$store.getters.joinMonth}} 月の月例山行 参加状態
+          {{$store.getters.joinMonth}} 月の月例山行 参加状態 <span style="color: red;">{{errMsg}}</span>
         </v-card-title>
         <v-card-text>
               <v-data-table
@@ -50,6 +50,7 @@
             value: 'join',
           },
         ],
+        errMsg: '',
       }
     },
     async mounted() {
@@ -102,7 +103,7 @@
       //   console.log('err:', err);
       // });
       } else {
-        // 未処理
+        errMsg = 'エラー発生 status='+ response.status
       }
     },
     methods:{

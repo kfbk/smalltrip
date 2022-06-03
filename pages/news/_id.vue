@@ -29,7 +29,7 @@ import axios from 'axios'
 
 export default {
   async asyncData({ params }) {
-    console.log(params)
+    // console.log(params)
     const { data } = await axios.get(
       `https://smalltrip.microcms.io/api/v1/news/${params.id}`,
       {
