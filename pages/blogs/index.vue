@@ -4,7 +4,7 @@
       <v-row justify="center">
         <v-col cols="12" sm="8" md="6">
     <h1>つぶやき一覧
-      <span style="font-size: 16px;">（最大100件）</span>
+      <span style="font-size: 16px;">（最大1000件）</span>
     </h1>
 
     <!-- 何故か、次はエラーになる。
@@ -52,7 +52,7 @@ export default {
   async asyncData() {
     const { data } = await axios.get(
       // your-service-id部分は自分のサービスidに置き換えてください
-      'https://smalltrip.microcms.io/api/v1/blog?limit=100',
+      'https://smalltrip.microcms.io/api/v1/blog?limit=1000',
       {
         // your-api-key部分は自分のapi-keyに置き換えてください
         headers: { 'X-MICROCMS-API-KEY': process.env.API_KEY }
@@ -61,6 +61,13 @@ export default {
     return {
       items: data.contents
     }
+  },
+  mounted() {
+    // 「blog/」となる場合がある。これはエラーになるので避けるため
+    // 次を考えたが、ダメだった。
+    // if (!this.$route.fullPath.endsWith('/blog')) {
+    //   this.$router.push('/blog')
+    // }
   }
 }
 </script>

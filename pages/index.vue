@@ -12,7 +12,7 @@
               <ul>
                 <li v-for="(item,key) in items" :key="key">
                   <span>{{ new Date(item.publishedAt).toLocaleDateString() }}</span>
-                  <nuxt-link :to="'article/' + item.id" style="text-decoration: none;">
+                  <nuxt-link :to="'blogs/article/' + item.id" style="text-decoration: none;">
                     {{ item.title }}
                   </nuxt-link>
                 </li>

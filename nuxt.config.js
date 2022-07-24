@@ -109,7 +109,7 @@ export default {
   generate: {
     routes() {
       const blogs = axios
-        .get('https://smalltrip.microcms.io/api/v1/blog', {
+        .get('https://smalltrip.microcms.io/api/v1/blog?limit=10', {
           headers: { 'X-MICROCMS-API-KEY': process.env.API_KEY }
         })
         .then((res) => {
@@ -118,7 +118,7 @@ export default {
           })
         })
         const news = axios
-        .get('https://smalltrip.microcms.io/api/v1/news', {
+        .get('https://smalltrip.microcms.io/api/v1/news?limit=10', {
           headers: { 'X-MICROCMS-API-KEY': process.env.API_KEY }
         })
         .then((res) => {

@@ -77,7 +77,7 @@ export default {
         },
         {
           name: 'つぶやき',
-          link: '/blog'
+          link: '/blogs/'
         },
         {
           name: '問い合わせ',
