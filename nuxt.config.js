@@ -81,7 +81,8 @@ export default {
   axios: {
     // ローカルデバッグ・実働の切り替えは、ここだけ変更すること
     //baseURL: 'http://localhost:5000/',
-    baseURL: 'https://mongo-trip.herokuapp.com/',
+    //baseURL: 'https://mongo-trip.herokuapp.com/',
+    baseURL: 'https://t0zlc9.deta.dev/',
   },
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
