@@ -74,7 +74,7 @@ export default {
     // },
       async loginUser() {
         this.btnDisabled = true
-        this.errMsg = '時間が掛かります'
+        // this.errMsg = '時間が掛かります'   2022/09/20 delete
         // console.log(this.user.password)
         this.$store.commit("password", this.user.password);
         try {
