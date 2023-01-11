@@ -1,4 +1,5 @@
 export const state = () => ({
+  isOpen: false,
   joinMonth: 0,
   joinYear: 0,    // 2022.5.12
   join: '',                   // 2022.5.12
@@ -9,8 +10,52 @@ export const state = () => ({
   tel: '',      // 2022.4.10
   level: '',     // 2022.4.10
 })
+
+// Storeからデータを得る
+  // 使い方：this.user.xxx = this.$store.getters.takePosts
+  // ただし、計算もしないのであれば、ここを使う必要なく、this.$store.state.isOpen とする
+export const getters = {
+  readOpen(state) {
+    return state.isOpen
+  },
+  nameSets(state) {
+    return state.nameSets;
+  },
+  joinMonth(state) {
+    return state.joinMonth
+  },
+  joinYear(state) {   // 2022.5.12
+    return state.joinYear
+  },
+  join(state) {   // 2022.5.12
+    return state.join
+  },
+  userName(state) {   // 2022.5.12
+    return state.userName
+  },
+  password(state) {
+    return state.password
+  },
+  tel(state) {
+    return state.tel
+  },
+  level(state) {
+    return state.level
+  },
+  order(state) {
+    return state.order
+  },
+}
+
+// Storeに保存する（commitで呼ばれる）
+  // 使い方：this.$store.commit('setPosts', res.data.contents);
 export const mutations = {
-  // 使い方：this.$store.commit("joinMonth", this.joinMonth);
+  clearOpen(state) {
+    state.isOpen = false
+  },
+  reverseOpen(state) {
+    state.isOpen = !state.isOpen
+  },
   nameSets(state, value) {
     // console.log('mutations/nameSets', value);
     // state.nameSets.push(value)   // こちらにするとエラーになる
@@ -40,35 +85,5 @@ export const mutations = {
   },
   order(state, value) {
     state.order = value;
-  },
-};
-export const getters = {
-  // 使い方：this.user.joinMonth = this.$store.getters.joinMonth
-  nameSets(state) {
-    return state.nameSets;
-  },
-  joinMonth(state) {
-    return state.joinMonth
-  },
-  joinYear(state) {   // 2022.5.12
-    return state.joinYear
-  },
-  join(state) {   // 2022.5.12
-    return state.join
-  },
-  userName(state) {   // 2022.5.12
-    return state.userName
-  },
-  password(state) {
-    return state.password
-  },
-  tel(state) {
-    return state.tel
-  },
-  level(state) {
-    return state.level
-  },
-  order(state) {
-    return state.order
   },
 }

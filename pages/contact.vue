@@ -1,15 +1,17 @@
 <template>
-  <div>
-    <v-container>
-      <v-row justify="center">
-        <v-col cols="12" sm="8" md="6">
+  <div class="tw-page">
     <p>
-      次の電話またはメールにて問い合わせ下さい<br><br>
+      次の電話またはメールにて問い合わせ下さい
+    </p>
+    <p class="py-4">
+      ――― 電話は、次で問い合わせ ――――
+    </p>
+    <p>
       居酒屋 [風車] 内、新井<br>
       電話番号：0495-21-8406<br>
       平日12:00～17:00に電話下さい
     </p>
-    <p>
+    <p class="py-4">
       ――― 以下は、メールでの問い合わせ ――――
     </p>
     <form name="contact" method="POST" netlify-honeypot="bot-field" netlify>
@@ -21,37 +23,24 @@
       <!-- ここから本文 -->
       <p>
         <label>お名前：
-          <input class="text" type="text" name="name" />
+          <input class="tw-input" type="text" name="name" />
         </label>
       </p>
       <p>
         <label>Eメール：
-          <input class="text" type="email" name="email" />
+          <input class="tw-input" type="email" name="email" />
         </label>
       </p>
       <p>
         <label>内容：
-          <textarea class="textlines text" name="message"></textarea>
+          <textarea class="h-64 tw-input" name="message"></textarea>
         </label>
       </p>
       <p>
-        <v-btn
-          color="primary"
-          elevation="12"
-          type="submit"
-        >
+        <button type="submit" class="bg-gradient-to-b from-blue-300 to-blue-800 hover:bg-gradient-to-l text-white rounded px-4 py-2">
           送信
-        </v-btn>
+        </button>
       </p>
     </form>
-        </v-col>
-      </v-row>
-    </v-container>
   </div>
 </template>
-
-<style>
-.textlines {
-    height: 120px;           /* 高さ */
-}
-</style>

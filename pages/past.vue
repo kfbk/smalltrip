@@ -1,10 +1,7 @@
 <template>
-  <div>
-    <!-- <v-container> -->
-    <v-row justify="center">
-      <v-col cols="12" sm="8" md="6">
-        <img src="~assets/img/hiking.png" height="100">
-        <div v-for="year in years" :key="year.yearname">
+  <div class="tw-page">
+    <img src="~assets/img/hiking.png" class="w-96">
+    <div v-for="year in years" :key="year.yearname">
           <p class="mt-4 mb-1">{{year.yearname}}</p>
           <table width="100%">
             <thead>
@@ -28,10 +25,7 @@
           <img src="~assets/img/kako1.png" >
           <img src="~assets/img/kako2.png" >
         </div>
-      </v-col>
-    </v-row>
-    <!-- </v-container> -->
-  </div>
+  </div>  
 </template>
 
 <script>
@@ -39,6 +33,51 @@ export default {
   data() {
     return {
       years: [
+      {
+          yearname: '2022年（コロナ休止あり）',
+          months: [
+          {
+              name: '１',
+              mount: '吾妻山',
+              place: '桐生市',
+            },
+            {
+              name: '４',
+              mount: '菅峰',
+              place: '東吾妻町',
+            },
+            {
+              name: '５',
+              mount: '嵩山',
+              place: '中之条町',
+            },
+            {
+              name: '６',
+              mount: '赤城五輪ハイキング',
+              place: '富士見村',
+            },
+            {
+              name: '７',
+              mount: '四阿屋山',
+              place: '両神村',
+            },
+            {
+              name: '９',
+              mount: '弓池',
+              place: '草津町',
+            },
+            {
+              name: '10',
+              mount: '黒瀧山',
+              place: '南牧村',
+            },
+            {
+              name: '11',
+              mount: '備前楯山',
+              place: '足尾町',
+            },
+          ]
+        },
         {
           yearname: '2021年（コロナ休止あり）',
           months: [

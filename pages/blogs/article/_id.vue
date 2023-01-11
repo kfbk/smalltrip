@@ -1,29 +1,22 @@
 <template>
-  <main class="main">
-    <v-container>
-      <v-row justify="center">
-        <v-col cols="12" sm="8" md="6">
-    <v-card>
-      <v-card-title>
+  <div class="container mx-auto max-w-sm">
+    <div class="flex justify-between">
+      <div class="font-bold">
         {{ title }}
-              <v-spacer />
-      <!-- <v-btn to="/blog" nuxt>戻る</v-btn> -->
-      <a @click="$router.back()">戻る</a>
-    </v-card-title>
-    <v-card-subtitle>
+      </div>
+      <div>
+        <button @click="$router.back()" class="bg-gradient-to-b from-blue-300 to-blue-800 hover:bg-gradient-to-l text-white rounded px-4 py-2">
+          戻る
+        </button>
+      </div>
+    </div>
+    <div>
       {{ new Date(publishedAt).toLocaleDateString() }} {{ nickname }}
-    </v-card-subtitle>
-    <hr>
-    <v-card-text>
+    </div>
+    <hr class="my-2">
     <div class="post" v-html="body"></div>
-    </v-card-text>
-    </v-card>
-        </v-col>
-      </v-row>
-    </v-container>
-  </main>
+  </div>
 </template>
-
 <script>
 import axios from 'axios'
 

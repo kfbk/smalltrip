@@ -1,0 +1,33 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@layer components {
+  .tw-page {
+    @apply container mx-auto max-w-sm;
+  }
+  .tw-btn-small {
+    @apply px-2 border-2 border-blue-500 rounded-md
+    bg-gradient-to-b from-blue-600 to-blue-400
+    hover:from-blue-500 hover:to-blue-300 
+    text-white shadow-lg;
+  }
+  .tw-btn-primary {
+    @apply my-2 px-4 py-2 border-2 border-blue-500 rounded-md
+    bg-gradient-to-b from-blue-600 to-blue-400
+    hover:from-blue-500 hover:to-blue-300 
+    text-white shadow-lg;
+  }
+  .tw-card {
+    @apply container mx-auto max-w-sm min-h-0 bg-white shadow-xl m-4 rounded-lg;
+  }
+  .tw-card-title {
+    @apply bg-cyan-400 rounded-lg p-4 text-xl;
+  }
+  .tw-card-body {
+    @apply p-4;
+  }
+  .tw-input {
+    @apply p-2 mb-1 w-full rounded-md border-2 border-blue-900 shadow-sm;
+  }
+}

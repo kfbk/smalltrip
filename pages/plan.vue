@@ -1,11 +1,8 @@
 <template>
-  <div>
-    <v-container>
-      <v-row justify="center">
-        <v-col cols="12" sm="8" md="6">
-    <img src="~assets/img/hiking.png" height="100">
-    <p>2022年　山行計画</p>
-    <table width="100%">
+  <div class="tw-page">
+    <img src="~assets/img/hiking.png" class="w-96">
+    <p class="bg-green-200 px-8 py-4 my-3">2023年（令和5年） 山行計画</p>
+    <table class="100%">
       <thead>
         <tr>
           <th width="10%">月</th>
@@ -18,51 +15,51 @@
       <tbody>
         <tr>
           <td>１</td>
-          <td>吾妻山</td>
-          <td>桐生市</td>
-          <td>吾妻公園ｰ吾妻山-村松峠ｰ吾妻公園</td>
-          <td>２時間半</td>
-        </tr>
-        <tr>
-          <td>２</td>
           <td>神成山</td>
           <td>富岡市</td>
           <td>神農原―神成山ー南蛇井</td>
-          <td style="background-color:red;">コロナ中止</td>
+          <td>２時間</td>
+        </tr>
+        <tr>
+          <td>２</td>
+          <td>美の山</td>
+          <td>秩父市</td>
+          <td>道の駅みなのー美の山ー和銅黒谷</td>
+          <td>３時間</td>
         </tr>
         <tr>
           <td>３</td>
-          <td>黒瀧山</td>
+          <td>鹿岳</td>
           <td>南牧村</td>
           <td>不動寺ー観音岩(870)ー鷹巣山－不動寺</td>
-          <td style="background-color:red;">コロナ中止</td>
+          <td>３時間40分</td>
         </tr>
         <tr>
           <td>４</td>
-          <td>菅峰</td>
-          <td>東吾妻町</td>
-          <td>須賀尾峠ー菅峰（往復）</td>
+          <td>寝釈迦</td>
+          <td>みどり市</td>
+          <td>塔の沢登山口ー寝釈迦ー賽の河原ー折塚</td>
           <td>３時間</td>
         </tr>
         <tr>
           <td>５</td>
-          <td>嵩山</td>
-          <td>中之条町</td>
-          <td>東登山口-嵩山－東登山口</td>
-          <td>２時間半</td>
+          <td>三峰山</td>
+          <td>沼田市</td>
+          <td>河内神社ー三峰山</td>
+          <td>３時間40分</td>
         </tr>
         <tr>
           <td>６</td>
-          <td>赤城五輪ハイキングコース</td>
-          <td>富士見村</td>
-          <td>大沼-五輪峠ｰ薬師岳ｰ出張峠ｰキャンプ場</td>
-          <td>３時間</td>
+          <td>迦葉山玉原湖</td>
+          <td>沼田市</td>
+          <td>弥勒寺ー迦葉山ー玉原湖</td>
+          <td>４時間</td>
         </tr>
         <tr>
           <td>７</td>
-          <td>四阿屋山</td>
-          <td>両神村</td>
-          <td>薬師堂ー四阿屋山（往復）</td>
+          <td>尾瀬ヶ原</td>
+          <td>片品村</td>
+          <td>鳩待峠ｰ山の鼻ｰ尾瀬ヶ原散策（往復）</td>
           <td>３時間</td>
         </tr>
         <tr>
@@ -74,24 +71,24 @@
         </tr>
         <tr>
           <td>９</td>
-          <td>弓池</td>
-          <td>草津町</td>
-          <td>草津白根山近辺</td>
-          <td>２時間</td>
+          <td>榛名相馬山</td>
+          <td>高崎市</td>
+          <td>松ノ沢峠ｰスルス峠ｰ相馬山ｰヤセオネ峠</td>
+          <td>３時間</td>
         </tr>
         <tr>
           <td>10</td>
-          <td>黒瀧山</td>
-          <td>南牧村</td>
-          <td>不動寺ー観音岩(870)ー鷹巣山－不動寺</td>
-          <td>３時間30分</td>
+          <td>弥彦山･角田山</td>
+          <td>新潟県</td>
+          <td>未定</td>
+          <td>未定</td>
         </tr>
         <tr>
           <td>11</td>
-          <td>備前楯山</td>
-          <td>足尾町</td>
-          <td>かじか荘ー備前楯山（往復）</td>
-          <td>2時間30分</td>
+          <td>石尊山</td>
+          <td>安中市</td>
+          <td>安中榛名駅-石尊山ｰ戸谷山ｰ安中榛名駅</td>
+          <td>３時間</td>
         </tr>
         <tr>
           <td>12</td>
@@ -102,21 +99,8 @@
         </tr>
       </tbody>
     </table>
-        </v-col>
-      </v-row>
-    </v-container>
   </div>
 </template>
-
-<script>
-export default {
-  data() {
-    return {
-    }
-  }
-}
-</script>
-
 <style scoped>
 th,td {
   border: solid 1px;              /* 枠線指定 */
