@@ -1,45 +1,36 @@
 <template>
-  <div>
-    <v-row justify="center">
-      <v-col cols="12" sm="8" md="6">
-        <v-card elevation="13">
-          <v-card-title>
-            <h3>ログインしてください。</h3>
+  <div class="tw-page">
+    <!-- <input id="email" class="p-2 mb-1 w-full rounded-md border-2 border-blue-900 shadow-sm" type="text"  v-model="user.email" />
+    <div>
+      {{user.email}}
+    </div> -->
+    <h3>下記で、ログインしてください。</h3>
             <h5>（会員ページを閲覧できます）<br>
             （会員になるには問合せしてください）</h5>
-          </v-card-title>
-          <v-card-text>
-    <!-- <h3 style="color: black; text-align: center">ログイン認証してください</h3> -->
-    <!-- <v-text-field v-model="mailAddress" label="メールアドレス" light></v-text-field>
-    <v-text-field v-model="password" label="パスワード" light></v-text-field>
-    <p class="errorMessage" style="color: red" v-if="valid">{{validError}}</p>
-    <v-btn @click="SignIn"> ログイン </v-btn> -->
             <form @submit.prevent="loginUser">
               <div class="form-group">
                 <label for="email">ID</label>
-                <input class="text" v-model="user.email">
+                <input id="email" class="p-2 mb-1 w-full rounded-md border-2 border-blue-900 shadow-sm" type="text" v-model="user.email">
               </div>
               <div class="form-group">
                 <label for="password">Password</label>
-                <input class="text" type="password" v-model="user.password">
+                <input id="password" class="p-2 mb-1 w-full rounded-md border-2 border-blue-900 shadow-sm" type="password" v-model="user.password">
               </div>
-              <v-btn color="primary mt-5" type="submit" :disabled="btnDisabled">ログイン</v-btn>
+              <button class="my-2 px-4 py-2
+                     border-2 border-blue-500 rounded-md
+                     bg-gradient-to-b from-blue-600 to-blue-400
+                     hover:from-blue-500 hover:to-blue-300 
+                     text-white shadow-lg">ログイン
+              </button>
               <span style="color: red;">{{errMsg}}</span>
             </form>
-          </v-card-text>
-        </v-card>
-      </v-col>
-    </v-row>
   </div>
 </template>
 
 <script>
-// import { getAuth, signInWithEmailAndPassword } from 'firebase/auth'
 export default {
   data () {
     return {
-      // mailAddress: '',
-      // password: '',
       user:{
         email:'',
         password:''
@@ -51,59 +42,17 @@ export default {
     }
   },
   methods: {
-    // SignIn () {
-    //   try {
-    //     const auth = getAuth();
-    //     signInWithEmailAndPassword(auth, this.mailAddress, this.password)
-    //       .then((user) => {
-    //         console.log('ログイン成功')
-    //         // this.$store.state.loginState = true　直接書いたらダメ
-    //         this.$store.commit('loginState', this.mailAddress, this.password);
-    //         // console.log(this.$store.state.loggedIn)
-    //         // ログインしたら飛ぶページを指定
-    //         this.$router.push("/kaiin");
-    //         this.valid = false
-    //       })
-    //       .catch((error) => {
-    //         console.error(error)
-    //         this.valid = true
-    //       })
-    //   } catch (e) {
-    //     console.error(e)
-    //   }
-    // },
       async loginUser() {
+        if (this.btnDisabled) return
         this.btnDisabled = true
-        // this.errMsg = '時間が掛かります'   2022/09/20 delete
-        // console.log(this.user.password)
         this.$store.commit("password", this.user.password);
         try {
           const response = await this.$auth.loginWith('local', { data:this.user });
-          // const msg = response.data.msg;
-          // console.log(this.user.password, response );
-          // {token: 'eyJhb...6uo'}
-          //リダイレクト先をhome: falseにする-->それでも!msgの場合はhomeにリダイレクトする
-          // 現在「home: '/kaiin'」としている
-          // if (msg) {
-          //   this.errMsg = msg
-          //   console.log('ここには、どんな時に来るのか不明')
-          //   // location.reload();
-          // } else {
-          //   this.errMsg = ''
-          //   console.log('Tokenが戻ってきて正常。この後、どこで「/api/auth/user」を出すのか？');
-          // }
         } catch(error) {
-          // 登録ユーザない場合・パスワード違いの場合、ここに来る（共にerror=403）
-          // console.log('satou'+error);
           this.errMsg = 'ID または Password が違います'
           this.btnDisabled = false
         }
       },
-    //メールアドレス形式で入力をチェック
-   checkString (mail){
-     var regex = /^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;
-     return regex.test(mail);
-   }
   }
 }
 </script>

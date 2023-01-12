@@ -1,27 +1,16 @@
 <template>
-  <main class="main">
-    <v-container>
-      <v-row justify="center">
-        <v-col cols="12" sm="8" md="6">
-    <v-card>
-      <v-card-title>
-        {{ title }}
-              <v-spacer />
-      <v-btn to="/kaiin" color="primary">戻る</v-btn>
-      <!-- <a @click="$router.back()">戻る</a> -->
-    </v-card-title>
-    <v-card-subtitle>
-      {{ new Date(updatedAt).toLocaleDateString() }}
-    </v-card-subtitle>
-    <hr>
-    <v-card-text>
-    <div class="post" v-html="content"></div>
-    </v-card-text>
-    </v-card>
-        </v-col>
-      </v-row>
-    </v-container>
-  </main>
+  <div class="tw-page">
+    <div class="tw-card">
+      <div class="tw-card-title">
+        会長の注意事項
+      </div>
+      <div class="tw-card-body">
+        <div>{{ title }}</div>
+        <div class="text-right mb-5">{{ new Date(updatedAt).toLocaleDateString() }}</div>
+        <nuxt-link to="/kaiin" class="tw-btn-primary">戻る</nuxt-link>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -29,7 +18,7 @@ import axios from 'axios'
 
 export default {
   async asyncData({ params }) {
-    // console.log(params)
+    console.log(params)
     const { data } = await axios.get(
       `https://smalltrip.microcms.io/api/v1/news/${params.id}`,
       {
