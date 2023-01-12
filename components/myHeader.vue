@@ -1,7 +1,7 @@
 <template>
   <div>
     <div>
-      <img src="~assets/img/azumayama.jpg" alt="" />
+      <img src="~assets/img/akagi.jpg" alt="" />
     </div>
     <nav class=" text-white bg-gray-500">
       <div class="hidden lg:flex justify-between items-center">
@@ -9,7 +9,7 @@
           <img src="/logo.png" alt="" class="h-4 m-4">
           <!-- <span>小さな旅友の会</span> -->
           <ul class="flex">
-            <li 
+            <li
               class="lg:border-none"
               v-for="(menuItem,index) in menuItems"
               :key="index"
@@ -35,21 +35,21 @@
               </svg>
             </button>
             <img src="/logo.png" alt="" class="h-4 m-4">
-            <span class="p-2">小さな旅友の会</span>
+            <span class="p-2">小さな旅</span>
           </div>
           <myLogin />
         </div>
-        <div :class="this.$store.state.isOpen? 'block': 'hidden'" 
+        <div :class="this.$store.state.isOpen? 'block': 'hidden'"
           class="bg-gray-500"
         >
           <ul>
-            <li 
+            <li
               class="border-b"
               v-for="(menuItem,index) in menuItems"
               :key="index"
             >
               <nuxt-link
-                :to="menuItem.link" 
+                :to="menuItem.link"
                 class="block px-8 py-2 hover:bg-gray-600"
               >
                 {{ menuItem.name }}
