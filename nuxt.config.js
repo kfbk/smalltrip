@@ -59,7 +59,8 @@ export default {
   axios: {
     // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
     //baseURL: 'http://localhost:5000/',
-    baseURL: 'https://t0zlc9.deta.dev/',
+    // baseURL: 'https://t0zlc9.deta.dev/',
+    baseURL: 'https://mongodb-ewn9.onrender.com/',
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
