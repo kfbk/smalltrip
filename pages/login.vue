@@ -5,7 +5,8 @@
       {{user.email}}
     </div> -->
     <h3>下記で、ログインしてください。</h3>
-            <h5>（会員ページを閲覧できます）<br>
+            <h5>（最初はログインに時間が掛かります）<br>
+            （会員ページを閲覧できます）<br>
             （会員になるには問合せしてください）</h5>
             <form @submit.prevent="loginUser">
               <div class="form-group">
@@ -19,7 +20,7 @@
               <button class="my-2 px-4 py-2
                      border-2 border-blue-500 rounded-md
                      bg-gradient-to-b from-blue-600 to-blue-400
-                     hover:from-blue-500 hover:to-blue-300 
+                     hover:from-blue-500 hover:to-blue-300
                      text-white shadow-lg">ログイン
               </button>
               <span style="color: red;">{{errMsg}}</span>

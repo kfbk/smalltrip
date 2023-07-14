@@ -50,7 +50,7 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/axios
-    '@nuxtjs/axios',  
+    '@nuxtjs/axios',
     '@nuxtjs/sitemap',
     '@nuxtjs/auth'
   ],
@@ -58,7 +58,7 @@ export default {
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
     // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
-    //baseURL: 'http://localhost:5000/',
+    // baseURL: 'http://localhost:5000/',
     // baseURL: 'https://t0zlc9.deta.dev/',
     baseURL: 'https://mongodb-ewn9.onrender.com/',
   },
