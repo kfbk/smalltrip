@@ -2,6 +2,9 @@
   <div class="tw-page">
     <img src="~assets/img/hiking.png" class="w-96">
     <p class="bg-green-200 px-8 py-4 my-3">2023年（令和5年） 山行計画</p>
+    <div class="tw-btn-primary w-32">
+      <button @click="pfdopen">詳細はこちら</button>
+    </div>
     <table class="100%">
       <thead>
         <tr>
@@ -99,9 +102,6 @@
         </tr>
       </tbody>
     </table>
-    <div>
-      <button @click="pfdopen">詳細</button>
-    </div>
   </div>
 </template>
 <style scoped>
