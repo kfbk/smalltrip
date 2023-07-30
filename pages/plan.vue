@@ -99,6 +99,9 @@
         </tr>
       </tbody>
     </table>
+    <div>
+      <button @click="pfdopen">詳細</button>
+    </div>
   </div>
 </template>
 <style scoped>
@@ -114,3 +117,13 @@ thead {
   background-color: aqua;
 }
 </style>
+
+<script>
+export default {
+  methods: {
+    pfdopen() {
+      document.location.href = '/2023plan.pdf'
+    }
+  }
+}
+</script>
