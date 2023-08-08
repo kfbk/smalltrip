@@ -122,7 +122,7 @@ thead {
 export default {
   methods: {
     pfdopen() {
-      document.location.href = '/2023plan08.pdf'
+      document.location.href = '/2023plan0808.pdf'
     }
   }
 }
