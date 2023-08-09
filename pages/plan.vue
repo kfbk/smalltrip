@@ -9,8 +9,8 @@
       <thead>
         <tr>
           <th width="10%">月</th>
-          <th width="20%">山　名</th>
-          <th width="70%">場　所<br />予定コース</th>
+          <th width="25%">山　名</th>
+          <th width="65%">場　所<br />予定コース</th>
         </tr>
       </thead>
       <tbody>
