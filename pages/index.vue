@@ -37,7 +37,7 @@
         「小さな旅友の会」紹介
       </h1>
       <div class="tw-card-body">
-        <figure><img src="~assets/img/DSC02471top.JPG.jpg"  /></figure>
+        <figure><img src="~assets/img/DSC02471top.jpg"  /></figure>
         <p>
           平成4年1月に高崎市の山登り仲間を中心として結成され、
           30年の歴史がある楽しい山登りの会です。
