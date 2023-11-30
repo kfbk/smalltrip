@@ -1,7 +1,7 @@
 <template>
   <div class="tw-page">
-    <img src="~assets/img/hiking.png" class="w-96">
-    <p class="bg-green-200 px-8 py-4 my-3">2023年（令和5年） 山行計画</p>
+    <img src="~assets/img/hiking.png" class="w-96" />
+    <p class="bg-green-200 px-8 py-4 my-3">2024年（令和6年） 山行計画</p>
     <!-- <div class="tw-btn-primary w-40">
       <button @click="pfdopen">難易度はこちら</button>
     </div> -->
@@ -16,38 +16,38 @@
       <tbody>
         <tr>
           <td>１</td>
-          <td>神成山</td>
-          <td>富岡市<br />神農原―神成山ー南蛇井</td>
+          <td>桐生観音山</td>
+          <td>桐生市<br />泉龍院ー観音山ーガッチン山ー文昌寺</td>
         </tr>
         <tr>
           <td>２</td>
-          <td>美の山</td>
-          <td>秩父市<br />道の駅みなのー美の山ー和銅黒谷</td>
+          <td>桜山</td>
+          <td>藤岡市<br />八塩温泉ー弁天山ー桜山ー駐車場</td>
         </tr>
         <tr>
           <td>３</td>
-          <td>鹿岳</td>
-          <td>南牧村<br />不動寺ー観音岩(870)ー鷹巣山－不動寺</td>
+          <td>伊豆ヶ岳</td>
+          <td>飯能市<br />正丸駅ー伊豆ヶ岳ー山伏峠ー名栗元気プラザ</td>
         </tr>
         <tr>
           <td>４</td>
-          <td>寝釈迦</td>
-          <td>みどり市<br />塔の沢登山口ー寝釈迦ー賽の河原ー折塚</td>
+          <td>迦葉山</td>
+          <td>沼田市<br />弥勒寺ー迦葉山ー玉原湖</td>
         </tr>
         <tr>
           <td>５</td>
-          <td>三峰山</td>
-          <td>沼田市<br />河内神社ー三峰山</td>
+          <td>物見山</td>
+          <td>下仁田町<br />神津牧場ｰ物見岩・物見山ー香坂峠ー神津牧場</td>
         </tr>
         <tr>
           <td>６</td>
-          <td>榛名相馬山</td>
-          <td>高崎市<br />松ノ沢峠ｰスルス峠ｰ相馬山ｰヤセオネ峠</td>
+          <td>二つ岳</td>
+          <td>渋川市<br />森林公園ｰ鷲巣風穴-雄岳雌岳-蒸湯跡-管理小屋</td>
         </tr>
         <tr>
           <td>７</td>
-          <td>尾瀬ヶ原</td>
-          <td>片品村<br />鳩待峠ｰ山の鼻ｰ尾瀬ヶ原散策（往復）</td>
+          <td>四阿山</td>
+          <td>嬬恋村<br />バルキャビン(ゴンドラ)ｰ四阿山（往復）</td>
         </tr>
         <tr>
           <td>８</td>
@@ -56,18 +56,21 @@
         </tr>
         <tr>
           <td>９</td>
-          <td>石尊山</td>
-          <td>安中市<br />安中榛名駅-石尊山ｰ戸谷山ｰ安中榛名駅</td>
+          <td>赤城地蔵岳</td>
+          <td>前橋市<br />小沼-長七郎岳-地蔵岳ｰ新坂平</td>
         </tr>
         <tr>
           <td>10</td>
-          <td>角田山･弥彦山</td>
-          <td>新潟県<br />1日目：角田山、2日目：弥彦山</td>
+          <td>尾瀬ケ原・三条滝</td>
+          <td>
+            片品村<br />1日目：鳩待峠-温泉小屋泊（三条の滝 往復）<br />
+            2日目：温泉小屋-鳩待峠
+          </td>
         </tr>
         <tr>
           <td>11</td>
-          <td>船が鼻山</td>
-          <td>昭和村<br />登山口ｰ楢水コースｰ山頂-登山口</td>
+          <td>碓氷峠歩き</td>
+          <td>松井田町<br />熊野神社ｰ碓井坂関所跡-横川</td>
         </tr>
         <tr>
           <td>12</td>
@@ -79,12 +82,13 @@
   </div>
 </template>
 <style scoped>
-th,td {
-  border: solid 1px;              /* 枠線指定 */
-  padding: 10px;      /* 余白指定 */
+th,
+td {
+  border: solid 1px; /* 枠線指定 */
+  padding: 10px; /* 余白指定 */
 }
 table {
-  border-collapse:  collapse;     /* セルの線を重ねる */
+  border-collapse: collapse; /* セルの線を重ねる */
   /* width: 350px; */
 }
 thead {
@@ -98,6 +102,6 @@ export default {
     // pfdopen() {
     //   document.location.href = '/2023plan0808.pdf'
     // }
-  }
-}
+  },
+};
 </script>
