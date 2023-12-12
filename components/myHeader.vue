@@ -1,7 +1,7 @@
 <template>
   <div>
     <div>
-      <img src="~assets/img/akagi.jpg" alt="" />
+      <img src="~assets/img/haruna.jpg" alt="" />
     </div>
     <nav class=" text-white bg-gray-500">
       <div class="hidden lg:flex justify-between items-center">
