@@ -1,20 +1,7 @@
-メイン画面をデプロイ
-		１．変更ファイルをsmalltripにコピー
-		２．cd git￥smalltrip
-		３．Sourcetreeを起動
-		４．「smalltrip」Tabを指定
-		５．ファイルステータスをクリック
-		６．「作業ツリーのファイル」で「すべてインデックスに追加」後、コミット
-		７．プッシュ
-
-https://smalltrip.netlify.app/
-	ログイン をクリック
-	IDとPasswordを入力
-	ログインできるまで1分くらい掛かる
-
-Netlify
-	https://app.netlify.com/teams/zuo-teng-bang-nan/overview
-	bitbucket でログイン
+2024/10/23 変更
+	index.vue ： 5000円 → 6000円
+	したが、SourcetreeのPushでエラー発生
+	smalltripをsmalltrip-oldにしてCloneを実行した
 
 リポジトリをクローンする
 
@@ -23,3 +10,14 @@ Netlify
 	CodeをクリックしてURLをコピー
 	cd git
 	git clone https://github.com/kfbk/smalltrip.git
+
+Sourcetree
+	Sourcetreeを起動
+	「smalltrip」Tabを指定
+	index.vue ： 5000円 → 6000円
+	ファイルステータスをクリック
+	「作業ツリーのファイル」で「すべてインデックスに追加」後、コミット
+	プッシュ
+
+結果
+	OKだった
