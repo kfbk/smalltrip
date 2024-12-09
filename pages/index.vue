@@ -1,7 +1,7 @@
 <template>
   <div class="tw-page">
     <div class="tw-card">
-      <div class="border border-red-500">
+      <div class="border border-red-500 mb-5 p-2">
         <div class="text-red-500">
         新「小さな旅友の会」ホームページを作りました。違いは、つぶやきにコメントを付けられるようにした事です。<br />
         次のURLをクリックして下さい。
