@@ -1,6 +1,15 @@
 <template>
   <div class="tw-page">
     <div class="tw-card">
+      <div class="border border-red-500">
+        <div class="text-red-500">
+        新「小さな旅友の会」ホームページを作りました。違いは、つぶやきにコメントを付けられるようにした事です。<br />
+        次のURLをクリックして下さい。
+        </div>
+        <a href="https://smalltrip.vercel.app">
+        https://smalltrip.vercel.app
+        </a>
+      </div>
       <div class="tw-card-title">
         つぶやき最新情報
       </div>
