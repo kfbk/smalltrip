@@ -34,6 +34,71 @@ export default {
     return {
       years: [
         {
+          yearname: "2024年",
+          months: [
+            {
+              name: "１",
+              mount: "桐生観音山",
+              place: "雪で中止",
+            },
+            {
+              name: "２",
+              mount: "桜山",
+              place: "藤岡市",
+            },
+            {
+              name: "３",
+              mount: "伊豆ヶ岳",
+              place: "飯能市",
+            },
+            {
+              name: "４",
+              mount: "迦葉山",
+              place: "沼田市",
+            },
+            {
+              name: "５",
+              mount: "物見山",
+              place: "下仁田町",
+            },
+            {
+              name: "６",
+              mount: "二つ岳",
+              place: "渋川市",
+            },
+            {
+              name: "７",
+              mount: "八間山、野反湖",
+              place: "吾妻郡中之条",
+            },
+            {
+              name: "８",
+              mount: "暑気払い",
+              place: "",
+            },
+            {
+              name: "９",
+              mount: "赤城地蔵岳",
+              place: "前橋市",
+            },
+            {
+              name: "10",
+              mount: "尾瀬ケ原・三条滝",
+              place: "片品村",
+            },
+            {
+              name: "11",
+              mount: "碓氷峠歩き",
+              place: "松井田町",
+            },
+            {
+              name: "12",
+              mount: "忘年会",
+              place: "",
+            },
+          ],
+        },
+        {
           yearname: "2023年",
           months: [
             {
