@@ -1,7 +1,7 @@
 <template>
   <div class="tw-page">
     <img src="~assets/img/hiking.png" class="w-96" />
-    <p class="bg-green-200 px-8 py-4 my-3">2024年（令和6年） 山行計画</p>
+    <p class="bg-green-200 px-8 py-4 my-3">2025年（令和7年） 山行計画</p>
     <!-- <div class="tw-btn-primary w-40">
       <button @click="pfdopen">難易度はこちら</button>
     </div> -->
