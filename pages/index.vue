@@ -4,7 +4,8 @@
       <p>本サイトは&nbsp;<span style="color:#e74c3c"><span style="font-size:22px"><strong>閉 鎖&nbsp;</strong></span></span>しました。</p>
       <p>自動的に移動しない場合は、下記のリンクをクリックして移動して下さい。</p>
       <p><a href="https://smalltrip.vercel.app">
-        <input style="background-color:#e74c3c;font-size:22px;color:white" type="button" value="新サイトへ行く" /></span></a></p>
+        <input style="background-color:#e74c3c;font-size:22px;color:white" type="button" value="新サイトへ行く" />
+      </a></p>
     </div>
   </div>
 </template>
