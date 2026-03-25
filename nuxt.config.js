@@ -2,7 +2,7 @@ import axios from 'axios'
 require("dotenv").config();
 const { API_KEY } = process.env;
 
-export default {
+module.exports = {
   env: {
     API_KEY
   },
@@ -22,7 +22,7 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-<!--      { 'http-equiv': 'refresh', content: '2;URL=https://smalltrip.vercel.app' }, -->
+      { 'http-equiv': 'refresh', content: '2;URL=https://smalltrip.vercel.app' },
       { hid: 'description', name: 'description', content: '' },
       { name: 'format-detection', content: '高崎,北関東,山,旅,友,会,山登り,ハイキング,本庄,深谷,岡部,上里町,伊勢崎,低山,グループ,埼玉,群馬,登山,中高年' }
     ],
